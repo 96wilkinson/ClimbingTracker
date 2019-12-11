@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: trainerapp
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Admin
+Implementation-Vendor-Id: com.qa.trainer
+Build-Jdk: 1.8.0_221
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/trainerapp
+Created-By: Maven Integration for Eclipse
+
