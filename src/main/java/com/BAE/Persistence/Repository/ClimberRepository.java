@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.BAE.Persistence.Domain.Climbers;
 
 @Repository
-public interface ClimberRepository extends JpaRepository<Climber, Long> {
+public interface ClimberRepository extends JpaRepository<Climbers, Long> {
 
 }
