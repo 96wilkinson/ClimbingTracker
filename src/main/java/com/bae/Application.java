@@ -1,4 +1,4 @@
-package com.BAE;
+package com.bae;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

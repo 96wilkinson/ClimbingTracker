@@ -1,4 +1,5 @@
-package com.BAE.Persistence.Domain;
+package com.bae.persistence.domain;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
