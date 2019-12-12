@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.BAE.Persistence.Domain.Climber;
+import com.BAE.Persistence.domain.Climbers; 
 import com.BAE.Persistence.Repository.ClimberRepository;
 
 @Service
@@ -13,10 +13,10 @@ public class ClimberService {
 	private ClimberRepository climberRepo;
 
 	public ClimberService(ClimberRepository ClimberRepo) {
-		this.climberRepo = climberRepo;
+
 	}
 
-	public List<Climber> getAllClimber() {
+	public List<Climbers> getAllClimber() {
 		if (climberRepo.findAll().isEmpty()) {
 			setUpClimber();
 		}
@@ -24,17 +24,17 @@ public class ClimberService {
 	}
 
 	private void setUpClimber() {
-		Climber john = new Climber("John", "Gordon");
-		Climber chris = new Climber("Chris", "Perrins");
+		Climbers john = new Climbers("Scrappy","John", "Gordon");
+		Climbers jordan= new Climbers("Jh","Jordan", "Harry");
 		climberRepo.save(john);
-		climberRepo.save(chris);
+		climberRepo.save(jordan);
 	}
 
-	public Climber addNewClimber(Climber climber) {
+	public Climbers addNewClimber(Climbers climber) {
 		return climberRepo.save(climber);
 	}
 
-	public Trainer updateClimber(Climber climber) {
+	public Climbers updateClimber(Climbers climber) {
 		return climberRepo.save(climber);
 	}
 

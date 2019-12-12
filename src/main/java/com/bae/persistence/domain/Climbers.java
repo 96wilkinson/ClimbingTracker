@@ -1,4 +1,4 @@
-package com.bae.persistence.domain;
+package com.BAE.Persistence.domain;
 
 
 import javax.persistence.Entity;

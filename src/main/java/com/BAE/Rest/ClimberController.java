@@ -1,6 +1,8 @@
 package com.BAE.Rest;
 
 import java.util.List;
+import com.BAE.Bussiness.ClimberService;
+import com.BAE.Persistence.domain.Climbers;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,8 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.BAE.business.ClimberService;
-import com.BAE.Persistence.Domain.Climber;
+
 
 @RestController
 @RequestMapping("/climberapp")
@@ -25,18 +26,18 @@ public class ClimberController {
 	}
 
 	@GetMapping("/climber")
-	public List<Climber> getAllClimber() {
+	public List<Climbers> getAllClimber() {
 		return climberService.getAllClimber();
 	}
 
 	@PostMapping("/climber")
-	public Climber addNewClimber(@RequestBody Climber climber) {
-		return climberService.addNewTrainer(climber);
+	public Climbers addNewClimber(@RequestBody Climbers climber) {
+		return climberService.addNewClimber(climber);
 	}
 
 	@PutMapping("/climber")
-	public Climber updateClimber(@RequestBody Climber climber) {
-		return climberService.updateTrainer(climber);
+	public Climbers updateClimber(@RequestBody Climbers climber) {
+		return climberService.updateClimber(climber);
 	}
 
 	@DeleteMapping("/climber/{id}")
