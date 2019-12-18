@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
-Implementation-Title: ClimbingTrackerapp
+Implementation-Title: Application
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: Admin
 Implementation-Vendor-Id: com.BAE.ClimbingTracker
 Build-Jdk: 1.8.0_221
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
- ot-starter-parent/ClimbingTrackerapp
+ ot-starter-parent/Application
 Created-By: Maven Integration for Eclipse
 

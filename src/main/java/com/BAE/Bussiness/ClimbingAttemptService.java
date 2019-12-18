@@ -8,31 +8,30 @@ import org.springframework.stereotype.Service;
 import com.BAE.Persistence.Repository.ClimbingAttemptRepository;
 import com.BAE.Persistence.domain.ClimbingAttempts;
 
-
 @Service
 public class ClimbingAttemptService {
-
+	@Autowired
 	private ClimbingAttemptRepository climbingAttemptRepo;
 
-	@Autowired
+	
 	public ClimbingAttemptService(ClimbingAttemptRepository climbingAttemptRepo) {
 		this.climbingAttemptRepo = climbingAttemptRepo;
 	}
 
 	public List<ClimbingAttempts> getAllClimbingAttempts() {
-}
+		return climbingAttemptRepo.findAll();
+	}
 
 	public ClimbingAttempts addNewClimbingAttempts(ClimbingAttempts climbingattempts) {
 		return climbingAttemptRepo.save(climbingattempts);
 	}
 
-	public ClimbingAttempts updateClimbingAttempt(ClimbingAttempts climbers) {
-		return climbingAttemptRepo.save(climbers);
+	public ClimbingAttempts updateClimbingAttempt(ClimbingAttempts climbingattempts) {
+		return climbingAttemptRepo.save(climbingattempts);
 	}
 
-	public String deleteClimbingAttempt(Long id) {
-		climbingAttemptRepo.deleteById(id);
+	public String deleteClimbingAttempt(Long climbAttemptId) {
+		climbingAttemptRepo.deleteById(climbAttemptId);
 		return "Climbing Attempt succesfully deleted";
 	}
 }
-

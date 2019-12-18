@@ -1,53 +1,87 @@
 package com.BAE.Persistence.domain;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.Date;
 
+@Entity
 public class ClimbingAttempts {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long ClimbAttemptId;
-	private Long climberId;
-	private Date Date;
-	private int Difficulty;
-	private int TimeSpent;
+	private Long Id;
+	private int day;
+	private int month;
+	private int year;
+	private int difficulty;
+	private int timeSpent;
+
+	public ClimbingAttempts() {
+
+	}
+
+	public ClimbingAttempts(int day, int month, int year, int difficulty, int timeSpent) {
+		super();
+		this.day = day;
+		this.month = month;
+		this.year = year;
+		this.difficulty = difficulty;
+		this.timeSpent = timeSpent;
+	}
+
 	public Long getClimbAttemptId() {
-		return ClimbAttemptId;
+		return Id;
 	}
+
 	public void setClimbAttemptId(Long climbAttemptId) {
-		ClimbAttemptId = climbAttemptId;
+		this.Id = climbAttemptId;
 	}
-	public Long getClimberId() {
-		return climberId;
+
+	public int getDay() {
+		return day;
 	}
-	public void setClimberId(Long climberId) {
-		this.climberId = climberId;
+
+	public void setDay(int day) {
+		this.day = day;
 	}
-	public Date getDate() {
-		return Date;
+
+	public int getMonth() {
+		return month;
 	}
-	public void setDate(Date date) {
-		Date = date;
+
+	public void setMonth(int month) {
+		this.month = month;
 	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
 	public int getDifficulty() {
-		return Difficulty;
+		return difficulty;
 	}
+
 	public void setDifficulty(int difficulty) {
-		Difficulty = difficulty;
+		this.difficulty = difficulty;
 	}
+
 	public int getTimeSpent() {
-		return TimeSpent;
+		return timeSpent;
 	}
+
 	public void setTimeSpent(int timeSpent) {
-		TimeSpent = timeSpent;
+		this.timeSpent = timeSpent;
 	}
+
 	@Override
 	public String toString() {
-		return "ClimbingAttempts [climberId=" + climberId + ", Date=" + Date + ", Difficulty=" + Difficulty
-				+ ", TimeSpent=" + TimeSpent + "]";
+		return "ClimbingAttempts [day=" + day + ", month=" + month + ", year=" + year + ", difficulty=" + difficulty
+				+ ", timeSpent=" + timeSpent + "]";
 	}
-	
+
 }

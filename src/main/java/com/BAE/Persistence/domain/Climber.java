@@ -1,25 +1,34 @@
 package com.BAE.Persistence.domain;
 
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Climber {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long climberId;
+	private Long Id;
 	private String userName;
 	private String firstName;
 	private String surName;
 	
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "climber_id")
+    private List<ClimbingAttempts> climbingAttempts;
+	
 	public Climber() {
 		
 	}
-
+	
 	public Climber(String userName, String firstName, String surName) {
 		super();
 		this.userName = userName;
@@ -30,11 +39,11 @@ public class Climber {
 
 
 	public Long getClimberId() {
-		return climberId;
+		return Id;
 	}
 
 	public void setClimberId(Long climberId) {
-		this.climberId = climberId;
+		this.Id = climberId;
 	}
 
 	public String getUserName() {
