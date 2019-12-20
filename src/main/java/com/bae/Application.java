@@ -1,13 +1,13 @@
-package com.BAE;
+package com.bae;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import com.BAE.Persistence.Repository.ClimberRepository;
-import com.BAE.Persistence.Repository.ClimbingAttemptRepository;
-import com.BAE.Persistence.domain.Climber;
-import com.BAE.Persistence.domain.ClimbingAttempts;
+import com.bae.Persistence.Repository.ClimberRepository;
+import com.bae.Persistence.Repository.ClimbingAttemptRepository;
+import com.bae.Persistence.domain.Climber;
+import com.bae.Persistence.domain.ClimbingAttempts;
 
 @SpringBootApplication
 public class Application {
@@ -19,7 +19,6 @@ public class Application {
 		climberRepo.save(new Climber("Scrappy","John", "Gordon"));
 		climberRepo.save(new Climber("jh447","Jordan","Harry"));
 		climbingAttemptRepo.save(new ClimbingAttempts(1,1,1996,1,2));
-		
 	}
 
 }

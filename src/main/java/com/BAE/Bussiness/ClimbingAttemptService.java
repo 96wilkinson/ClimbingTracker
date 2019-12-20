@@ -1,12 +1,12 @@
-package com.BAE.Bussiness;
+package com.bae.Bussiness;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.BAE.Persistence.Repository.ClimbingAttemptRepository;
-import com.BAE.Persistence.domain.ClimbingAttempts;
+import com.bae.Persistence.Repository.ClimbingAttemptRepository;
+import com.bae.Persistence.domain.ClimbingAttempts;
 
 @Service
 public class ClimbingAttemptService {

@@ -1,12 +1,14 @@
-package com.BAE.Bussiness;
+package com.bae.Bussiness;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.BAE.Persistence.domain.Climber;
-import com.BAE.Persistence.Repository.ClimberRepository;
+import com.bae.Persistence.Repository.ClimberRepository;
+import com.bae.Persistence.domain.Climber;
+
+import Exceptions.ClimberNotFoundException;
 
 @Service
 public class ClimberService {
@@ -26,12 +28,24 @@ public class ClimberService {
 		return climberRepo.save(climbers);
 	}
 
-	public Climber updateClimber(Climber climbers) {
-		return climberRepo.save(climbers);
+	public Climber updateClimber(Climber climber, Long climberId) {
+		Climber toUpdate = findClimberById(climberId);
+		toUpdate.setUserName(climber.getUserName());
+		toUpdate.setFirstName(climber.getFirstName());
+		toUpdate.setSurName(climber.getSurName());
+		return this.climberRepo.save(toUpdate);
 	}
 
-	public String deleteClimber(Long climberId) {
-		climberRepo.deleteById(climberId);
-		return "Climber succesfully deleted";
+	public boolean deleteClimber(Long climberId) {
+		if (!this.climberRepo.existsById(climberId)) {
+			throw new ClimberNotFoundException();
+		}
+		this.climberRepo.deleteById(climberId);
+		return this.climberRepo.existsById(climberId);
 	}
+
+	public Climber findClimberById(long climberId) {
+		return this.climberRepo.findById(climberId).orElseThrow(() -> new ClimberNotFoundException());
+	}
+
 }

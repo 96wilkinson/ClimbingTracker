@@ -1,9 +1,6 @@
-package com.BAE.Rest;
+package com.bae.Rest;
 
 import java.util.List;
-
-import com.BAE.Bussiness.ClimbingAttemptService;
-import com.BAE.Persistence.domain.ClimbingAttempts;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -14,6 +11,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.bae.Bussiness.ClimbingAttemptService;
+import com.bae.Persistence.domain.ClimbingAttempts;
 
 @RestController
 @RequestMapping("/climberapp")

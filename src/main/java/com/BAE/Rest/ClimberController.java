@@ -1,8 +1,6 @@
-package com.BAE.Rest;
+package com.bae.Rest;
 
 import java.util.List;
-import com.BAE.Bussiness.ClimberService;
-import com.BAE.Persistence.domain.Climber;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -14,14 +12,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
+import com.bae.Bussiness.ClimberService;
+import com.bae.Persistence.domain.Climber;
 
 @RestController
 @RequestMapping("/climberapp")
 public class ClimberController {
-	
+
 	private ClimberService climberService;
-	
+
 	@Autowired
 	public ClimberController(ClimberService climberService) {
 		this.climberService = climberService;
@@ -38,13 +37,13 @@ public class ClimberController {
 	}
 
 	@PutMapping("/climber")
-	public Climber updateClimber(@RequestBody Climber climber) {
-		return climberService.updateClimber(climber);
+	public Climber updateClimber(@RequestBody Climber climber,Long climberId) {
+		return climberService.updateClimber(climber, climberId);
 	}
 
 	@DeleteMapping("/climber/{id}")
-	public String deleteClimber(@PathVariable(value = "id") Long id) {
-		return climberService.deleteClimber(id);
+	public void deleteClimber(@PathVariable(value = "id") Long id) {
+		this.climberService.deleteClimber(id);
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.BAE.Persistence.domain;
+package com.bae.Persistence.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -82,6 +82,46 @@ public class ClimbingAttempts {
 	public String toString() {
 		return "ClimbingAttempts [day=" + day + ", month=" + month + ", year=" + year + ", difficulty=" + difficulty
 				+ ", timeSpent=" + timeSpent + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((Id == null) ? 0 : Id.hashCode());
+		result = prime * result + day;
+		result = prime * result + difficulty;
+		result = prime * result + month;
+		result = prime * result + timeSpent;
+		result = prime * result + year;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ClimbingAttempts other = (ClimbingAttempts) obj;
+		if (Id == null) {
+			if (other.Id != null)
+				return false;
+		} else if (!Id.equals(other.Id))
+			return false;
+		if (day != other.day)
+			return false;
+		if (difficulty != other.difficulty)
+			return false;
+		if (month != other.month)
+			return false;
+		if (timeSpent != other.timeSpent)
+			return false;
+		if (year != other.year)
+			return false;
+		return true;
 	}
 
 }
