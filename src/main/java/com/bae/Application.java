@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import com.bae.Persistence.Repository.ClimberRepository;
-import com.bae.Persistence.Repository.ClimbingAttemptRepository;
-import com.bae.Persistence.domain.Climber;
-import com.bae.Persistence.domain.ClimbingAttempts;
+import com.bae.persistence.repository.ClimberRepository;
+import com.bae.persistence.repository.ClimbingAttemptRepository;
+import com.bae.persistence.domain.Climber;
+import com.bae.persistence.domain.ClimbingAttempts;
 
 @SpringBootApplication
 public class Application {

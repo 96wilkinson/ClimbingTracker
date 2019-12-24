@@ -17,9 +17,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import com.bae.Bussiness.ClimberService;
-import com.bae.Persistence.Repository.ClimberRepository;
-import com.bae.Persistence.domain.Climber;
+import com.bae.bussiness.ClimberService;
+import com.bae.persistence.repository.ClimberRepository;
+import com.bae.persistence.domain.Climber;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ClimberServiceUnitTests {
@@ -36,7 +36,7 @@ public class ClimberServiceUnitTests {
 
 	private Climber testClimberWithID;
 
-	final long id = 1L;
+	private final long id = 1L;
 
 	@Before
 	public void init() {
@@ -81,21 +81,8 @@ public class ClimberServiceUnitTests {
 
 		when(repo.findAll()).thenReturn(this.climberList);
 
-		assertFalse("Controller has found no ducks", this.service.getAllClimber().isEmpty());
+		assertFalse("Controller has found no Climbers", this.service.getAllClimber().isEmpty());
 
 		verify(repo, times(1)).findAll();
 	}
-
-//	@Test
-//	public void getAllClimbersTest() {	//service is fine its just we have no repostiory as we have no DB
-//		List<Climber> climberRepo = new ArrayList<>();
-//		climberRepo.add(new Climber("ClimberDude123", "John", "Smith"));
-//		Mockito  // follows the given when testing
-//			.when(repo.findAll()) //when repo.find all is called return ->
-//			.thenReturn(new ArrayList<Climber>()); // <- this
-//		assertTrue("Returned when no Climbers", this.service.getAllClimber().size() > 0);
-//
-//		Mockito.verify(repo, times(1)).findAll(); //verifying the repo.findall has 
-//							// to be called at least once
-//	}
 }
