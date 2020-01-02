@@ -3,7 +3,7 @@ package business;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Before;
@@ -38,18 +38,20 @@ public class ClimberServiceIntegrationTest {
 
 	@Before
 	public void init() {
-		this.testClimber = new Climber("96Wilkinson", "Tony", "Wilkinson");
 
+		this.testClimber = new Climber("96Wilkinson", "Tony", "Wilkinson");
 		this.repo.deleteAll();
-		// getting around auto-generated id's
 		this.testClimberWithID = this.repo.save(this.testClimber);
-		climbers = new ArrayList<>();
-		climbers.add(testClimberWithID);
 	}
 
 	@Test
 	public void testCreateClimber() {
 		assertEquals(this.testClimberWithID, this.service.addNewClimber(testClimber));
+	}
+
+	@Test
+	public void testReadClimber() {
+		assertThat(this.service.getAllClimber()).isEqualTo(Arrays.asList(new Climber[] { this.testClimberWithID }));
 	}
 
 	@Test
@@ -64,9 +66,8 @@ public class ClimberServiceIntegrationTest {
 
 	@Test
 	public void testUpdateClimber() {
-		Climber newClimber = new Climber("Sir Duckington esq.", "Blue", "Duckington Manor");
-		Climber updatedClimber = new Climber(newClimber.getUserName(), newClimber.getFirstName(),
-				newClimber.getSurName());
+		Climber newClimber = new Climber("AJohn123", "Avery", "Johnston");
+		Climber updatedClimber = new Climber(newClimber.getUserName(), newClimber.getFirstName(),newClimber.getSurName());
 		updatedClimber.setId(this.testClimberWithID.getId());
 
 		assertThat(this.service.updateClimber(newClimber, this.testClimberWithID.getId())).isEqualTo(updatedClimber);

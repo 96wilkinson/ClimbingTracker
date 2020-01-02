@@ -26,22 +26,25 @@ public class ClimbingAttemptController {
 		this.climbingAttemptService = climbingAttemptService;
 	}
 
-	@GetMapping("/climbingAttempt")
+	@GetMapping("/getAllClimbingAttempts")
 	public List<ClimbingAttempts> getAllClimbingAttempts() {
 		return climbingAttemptService.getAllClimbingAttempts();
 	}
 
-	@PostMapping("/climbingAttempt")
+	@GetMapping("/getClimbingAttempt/{id}")
+	public ClimbingAttempts getClimbingAttempts(@PathVariable Long id) { return this.climbingAttemptService.findClimbingAttemptsById(id); }
+
+	@PostMapping("/createClimbingAttempt")
 	public ClimbingAttempts addNewClimber(@RequestBody ClimbingAttempts climbingAttempts) {
 		return climbingAttemptService.addNewClimbingAttempts(climbingAttempts);
 	}
 
-	@PutMapping("/climbingAttempt")
-	public ClimbingAttempts updateClimber(@RequestBody ClimbingAttempts climbingAttempts) {
-		return climbingAttemptService.updateClimbingAttempt(climbingAttempts);
+	@PutMapping("/updateClimbingAttempt/{id}")
+	public ClimbingAttempts updateClimber(@PathVariable(value = "id") Long id,@RequestBody ClimbingAttempts climbingAttempts) {
+		return climbingAttemptService.updateClimbingAttempt(climbingAttempts,id);
 	}
 
-	@DeleteMapping("/climbingAttempt/{id}")
+	@DeleteMapping("/DeleteClimbingAttempt/{id}")
 	public String deleteClimbingAttempt(@PathVariable(value = "id") Long id) {
 		return climbingAttemptService.deleteClimbingAttempt(id);
 	}

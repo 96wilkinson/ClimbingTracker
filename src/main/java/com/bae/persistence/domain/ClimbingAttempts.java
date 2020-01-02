@@ -10,7 +10,7 @@ public class ClimbingAttempts {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+	private Long id;
 	private int day;
 	private int month;
 	private int year;
@@ -30,13 +30,9 @@ public class ClimbingAttempts {
 		this.timeSpent = timeSpent;
 	}
 
-	public Long getClimbAttemptId() {
-		return Id;
-	}
+	public Long getId() { return id; }
 
-	public void setClimbAttemptId(Long climbAttemptId) {
-		this.Id = climbAttemptId;
-	}
+	public void setId(Long id) { this.id = id; }
 
 	public int getDay() {
 		return day;
@@ -88,7 +84,7 @@ public class ClimbingAttempts {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((Id == null) ? 0 : Id.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + day;
 		result = prime * result + difficulty;
 		result = prime * result + month;
@@ -106,10 +102,10 @@ public class ClimbingAttempts {
 		if (getClass() != obj.getClass())
 			return false;
 		ClimbingAttempts other = (ClimbingAttempts) obj;
-		if (Id == null) {
-			if (other.Id != null)
+		if (id == null) {
+			if (other.id != null)
 				return false;
-		} else if (!Id.equals(other.Id))
+		} else if (!id.equals(other.id))
 			return false;
 		if (day != other.day)
 			return false;
@@ -123,5 +119,6 @@ public class ClimbingAttempts {
 			return false;
 		return true;
 	}
+
 
 }

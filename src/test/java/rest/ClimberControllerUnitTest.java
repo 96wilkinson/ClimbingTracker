@@ -80,7 +80,7 @@ public class ClimberControllerUnitTest {
         verify(service, times(1)).getAllClimber();
     }
     @Test
-    public void updateDucksTest() {
+    public void updateClimbersTest() {
         // given
         Climber newClimber = new Climber("Sir Duckington esq.", "Blue", "Duckington Manor");
         Climber updatedClimber = new Climber(newClimber.getUserName(), newClimber.getFirstName(), newClimber.getSurName());

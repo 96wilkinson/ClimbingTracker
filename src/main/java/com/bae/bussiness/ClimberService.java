@@ -44,7 +44,7 @@ public class ClimberService {
 		return this.climberRepo.existsById(id);
 	}
 
-	public Climber findClimberById(long id) {
+	public Climber findClimberById(Long id) {
 		return this.climberRepo.findById(id).orElseThrow(() -> new ClimberNotFoundException());
 	}
 

@@ -18,7 +18,7 @@ public class Application {
 		ClimbingAttemptRepository climbingAttemptRepo = app.getBean(ClimbingAttemptRepository.class);
 		climberRepo.save(new Climber("Scrappy","John", "Gordon"));
 		climberRepo.save(new Climber("jh447","Jordan","Harry"));
-		climbingAttemptRepo.save(new ClimbingAttempts(1,1,1996,1,2));
+		climbingAttemptRepo.save(new ClimbingAttempts(18,12,1996,3,5));
 	}
 
 }

@@ -2,6 +2,7 @@ package com.bae.bussiness;
 
 import java.util.List;
 
+import exceptions.ClimbingAttemptNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,11 +23,15 @@ public class ClimbingAttemptService {
 		return climbingAttemptRepo.findAll();
 	}
 
+	public ClimbingAttempts findClimbingAttemptsById(Long id) {
+		return this.climbingAttemptRepo.findById(id).orElseThrow(() -> new ClimbingAttemptNotFoundException());
+	}
+
 	public ClimbingAttempts addNewClimbingAttempts(ClimbingAttempts climbingattempts) {
 		return climbingAttemptRepo.save(climbingattempts);
 	}
 
-	public ClimbingAttempts updateClimbingAttempt(ClimbingAttempts climbingattempts) {
+	public ClimbingAttempts updateClimbingAttempt(ClimbingAttempts climbingattempts, Long id) {
 		return climbingAttemptRepo.save(climbingattempts);
 	}
 
