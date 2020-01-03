@@ -45,8 +45,8 @@ public class ClimbingAttemptController {
 	}
 
 	@DeleteMapping("/DeleteClimbingAttempt/{id}")
-	public String deleteClimbingAttempt(@PathVariable(value = "id") Long id) {
-		return climbingAttemptService.deleteClimbingAttempt(id);
+	public void deleteClimbingAttempt(@PathVariable(value = "id") Long id) {
+		this.climbingAttemptService.deleteClimbingAttempt(id);
 	}
 
 }

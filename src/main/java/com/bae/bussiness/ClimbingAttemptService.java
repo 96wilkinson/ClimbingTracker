@@ -35,8 +35,11 @@ public class ClimbingAttemptService {
 		return climbingAttemptRepo.save(climbingattempts);
 	}
 
-	public String deleteClimbingAttempt(Long climbAttemptId) {
-		climbingAttemptRepo.deleteById(climbAttemptId);
-		return "Climbing Attempt succesfully deleted";
+	public boolean deleteClimbingAttempt(Long climbAttemptId) {
+		if (!this.climbingAttemptRepo.existsById(climbAttemptId)) {
+			throw new ClimbingAttemptNotFoundException();
+		}
+		this.climbingAttemptRepo.deleteById(climbAttemptId);
+		return this.climbingAttemptRepo.existsById(climbAttemptId);
 	}
 }

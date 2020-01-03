@@ -47,7 +47,7 @@ public class ClimbingAttemptServiceUnitTests {
 	}
 
 	@Test
-	public void createClimberTest() {
+	public void createClimbingAttemptTest() {
 		when(this.repo.save(testClimbingAttempt)).thenReturn(testClimbingAttemptWithID);
 
 		assertEquals(this.testClimbingAttemptWithID, this.service.addNewClimbingAttempts(testClimbingAttempt));
@@ -56,7 +56,7 @@ public class ClimbingAttemptServiceUnitTests {
 	}
 
 	@Test
-	public void deleteClimberTest() {
+	public void deleteClimbingAttemptTest() {
 		when(this.repo.existsById(id)).thenReturn(true, false);
 
 		this.service.deleteClimbingAttempt(id);
@@ -65,7 +65,7 @@ public class ClimbingAttemptServiceUnitTests {
 	}
 
 	@Test
-	public void findClimberByIDTest() {
+	public void findClimbingAttemptByIDTest() {
 		when(this.repo.findById(this.id)).thenReturn(Optional.of(this.testClimbingAttemptWithID));
 
 		assertEquals(this.testClimbingAttemptWithID, this.service.findClimbingAttemptsById(this.id));
@@ -74,7 +74,7 @@ public class ClimbingAttemptServiceUnitTests {
 	}
 
 	@Test
-	public void readClimberTest() {
+	public void readClimbingAttemptTest() {
 
 		when(repo.findAll()).thenReturn(this.climbingAttemptList);
 

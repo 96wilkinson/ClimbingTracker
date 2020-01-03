@@ -56,7 +56,9 @@ public class ClimberServiceIntegrationTest {
 
 	@Test
 	public void testDeleteClimber() {
-		assertThat(this.service.deleteClimber(this.testClimberWithID.getId())).isFalse();
+
+		assertThat(this.service.deleteClimber(this.testClimberWithID.getId()))
+				.isFalse();
 	}
 
 	@Test
