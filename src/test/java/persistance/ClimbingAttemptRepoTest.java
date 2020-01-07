@@ -22,7 +22,7 @@ public class ClimbingAttemptRepoTest {
     @Autowired
     private ClimbingAttemptRepository repo;
 
-    private final ClimbingAttempts TEST_Attempt = new ClimbingAttempts(25,12,1996, 3, 4);
+    private final ClimbingAttempts TEST_Attempt = new ClimbingAttempts(18,12,1996, 3, 4);
 
     private ClimbingAttempts testSavedAttempt;
 

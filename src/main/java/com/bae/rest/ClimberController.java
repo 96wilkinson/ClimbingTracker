@@ -38,6 +38,7 @@ public class ClimberController {
 
 	@PostMapping("/createClimber")
 	public Climber addNewClimber(@RequestBody Climber climber) {
+
 		return climberService.addNewClimber(climber);
 	}
 
