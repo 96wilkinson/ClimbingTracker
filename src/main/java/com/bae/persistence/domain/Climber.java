@@ -1,6 +1,7 @@
 package com.bae.persistence.domain;
 
 import java.util.List;
+import java.util.Objects;
 
 import javax.persistence.*;
 
@@ -20,9 +21,9 @@ public class Climber {
 	@Column(name="surname")
 	private String surname;
 
-	@OneToMany(cascade = CascadeType.ALL)
-	@Column(name = "Climber_Id")
-	private List<ClimbingAttempts> climbingAttempts;
+	/*@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name = "Climber_Id")
+	private List<ClimbingAttempts> climbingAttempts;*/
 
 	public Climber(String username, String firstname, String surname) {
 		super();
@@ -65,6 +66,7 @@ public class Climber {
 		this.surname = surname;
 	}
 
+
 	@Override
 	public String toString() {
 		return "Climber{" +
@@ -76,54 +78,18 @@ public class Climber {
 	}
 
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + (int) (id ^ (id >>> 32));
-		result = prime * result + ((climbingAttempts == null) ? 0 : climbingAttempts.hashCode());
-		result = prime * result + ((firstname == null) ? 0 : firstname.hashCode());
-		result = prime * result + ((surname == null) ? 0 : surname.hashCode());
-		result = prime * result + ((username == null) ? 0 : username.hashCode());
-		return result;
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Climber climber = (Climber) o;
+		return Objects.equals(id, climber.id) &&
+				Objects.equals(username, climber.username) &&
+				Objects.equals(firstname, climber.firstname) &&
+				Objects.equals(surname, climber.surname);
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Climber other = (Climber) obj;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
-			return false;
-		if (climbingAttempts == null) {
-			if (other.climbingAttempts != null)
-				return false;
-		} else if (!climbingAttempts.equals(other.climbingAttempts))
-			return false;
-		if (firstname == null) {
-			if (other.firstname != null)
-				return false;
-		} else if (!firstname.equals(other.firstname))
-			return false;
-		if (surname == null) {
-			if (other.surname != null)
-				return false;
-		} else if (!surname.equals(other.surname))
-			return false;
-		if (username == null) {
-			if (other.username != null)
-				return false;
-		} else if (!username.equals(other.username))
-			return false;
-		return true;
+	public int hashCode() {
+		return Objects.hash(id, username, firstname, surname);
 	}
-
-
-
 }

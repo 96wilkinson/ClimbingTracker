@@ -2,6 +2,7 @@ package com.bae.bussiness;
 
 import java.util.List;
 
+import com.bae.persistence.domain.Climber;
 import exceptions.ClimbingAttemptNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,41 +12,51 @@ import com.bae.persistence.domain.ClimbingAttempts;
 
 @Service
 public class ClimbingAttemptService {
-	@Autowired
-	private ClimbingAttemptRepository climbingAttemptRepo;
 
-	
-	public ClimbingAttemptService(ClimbingAttemptRepository climbingAttemptRepo) {
-		this.climbingAttemptRepo = climbingAttemptRepo;
+	private ClimbingAttemptRepository AttemptRepo;
+
+	private ClimberService ClimberService;
+
+	@Autowired
+	public ClimbingAttemptService(ClimbingAttemptRepository climbingAttemptRepo
+			,ClimberService ClimberService) {
+		this.AttemptRepo = climbingAttemptRepo;
+		this.ClimberService = ClimberService;
 	}
 
 	public List<ClimbingAttempts> getAllClimbingAttempts() {
-		return climbingAttemptRepo.findAll();
+		return AttemptRepo.findAll();
 	}
 
 	public ClimbingAttempts findClimbingAttemptsById(Long id) {
-		return this.climbingAttemptRepo.findById(id).orElseThrow(() -> new ClimbingAttemptNotFoundException());
+		return this.AttemptRepo.findById(id).orElseThrow(() -> new ClimbingAttemptNotFoundException());
 	}
 
-	public ClimbingAttempts addNewClimbingAttempts(ClimbingAttempts climbingattempts) {
-		return climbingAttemptRepo.save(climbingattempts);
+	public ClimbingAttempts addNewClimbingAttempts(ClimbingAttempts climber) {
+		return AttemptRepo.save(climber);
 	}
 
-	public ClimbingAttempts updateClimbingAttempt(ClimbingAttempts climbingattempts, Long id) {
+	public ClimbingAttempts updateClimbingAttempt(ClimbingAttempts climber, Long id) {
 		ClimbingAttempts toUpdate = findClimbingAttemptsById(id);
-		toUpdate.setDay(climbingattempts.getDay());
-		toUpdate.setMonth(climbingattempts.getMonth());
-		toUpdate.setYear(climbingattempts.getYear());
-		toUpdate.setDifficulty(climbingattempts.getDifficulty());
-		toUpdate.setTimeSpent(climbingattempts.getTimeSpent());
-		return this.climbingAttemptRepo.save(toUpdate);
+		toUpdate.setDay(climber.getDay());
+		toUpdate.setMonth(climber.getMonth());
+		toUpdate.setYear(climber.getYear());
+		toUpdate.setDifficulty(climber.getDifficulty());
+		toUpdate.setTimeSpent(climber.getTimeSpent());
+		return this.AttemptRepo.save(toUpdate);
+	}
+
+	public ClimbingAttempts addClimberToClimbingAttempts(long id, Climber climber) {
+		ClimbingAttempts toUpdate = findClimbingAttemptsById(id);
+		/*toUpdate.set*/
+		return this.AttemptRepo.save(toUpdate);
 	}
 
 	public boolean deleteClimbingAttempt(Long climbAttemptId) {
-		if (!this.climbingAttemptRepo.existsById(climbAttemptId)) {
+		if (!this.AttemptRepo.existsById(climbAttemptId)) {
 			throw new ClimbingAttemptNotFoundException();
 		}
-		this.climbingAttemptRepo.deleteById(climbAttemptId);
-		return this.climbingAttemptRepo.existsById(climbAttemptId);
+		this.AttemptRepo.deleteById(climbAttemptId);
+		return this.AttemptRepo.existsById(climbAttemptId);
 	}
 }

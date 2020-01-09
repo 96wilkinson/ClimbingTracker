@@ -22,8 +22,9 @@ public class ClimbingAttemptController {
 	private ClimbingAttemptService climbingAttemptService;
 
 	@Autowired
-	public ClimbingAttemptController(ClimbingAttemptService climbingAttemptService) {
-		this.climbingAttemptService = climbingAttemptService;
+	public ClimbingAttemptController(ClimbingAttemptService service) {
+		super();
+		this.climbingAttemptService = service;
 	}
 
 	@GetMapping("/getAllClimbingAttempts")
@@ -35,8 +36,8 @@ public class ClimbingAttemptController {
 	public ClimbingAttempts getClimbingAttempts(@PathVariable Long id) { return this.climbingAttemptService.findClimbingAttemptsById(id); }
 
 	@PostMapping("/createClimbingAttempt")
-	public ClimbingAttempts addNewClimber(@RequestBody ClimbingAttempts climbingAttempts) {
-		return climbingAttemptService.addNewClimbingAttempts(climbingAttempts);
+	public ClimbingAttempts addNewClimber(@RequestBody ClimbingAttempts climber) {
+		return climbingAttemptService.addNewClimbingAttempts(climber);
 	}
 
 	@PutMapping("/updateClimbingAttempt/{id}")
