@@ -2,9 +2,9 @@
 let Edit_URL = 'http://localhost:8080/demo/climberapp/updateClimber/';
 function edit_row(no)
 {
-    document.getElementById("Edit" + no).style.display="none";
-    document.getElementById("Del" + no).style.display="none";
-    document.getElementById("Save"+no).style.display="block";
+    document.getElementById("Edit" + no).className="NotInUse";
+    document.getElementById("Del" + no).className="NotInUse";
+    document.getElementById("Save"+no).className="InUse";
 
     let username=document.getElementById("Username"+no);
     let firstname=document.getElementById("Firstname"+no);
@@ -29,17 +29,17 @@ function save_row(no)
     document.getElementById("Firstname_input"+no).innerHTML=firstname;
     document.getElementById("Surname_input"+no).innerHTML=surname;
 
-    document.getElementById("Edit"+no).style.display="block";
-    document.getElementById("Del"+no).style.display="block";
-    document.getElementById("Save"+no).style.display="none";
+    document.getElementById("Edit"+no).className="InUse";
+    document.getElementById("Del"+no).className="InUse";
+    document.getElementById("Save"+no).className="NotInUse"
 
     axios.put(Edit_URL + no,{
         username: username,
         firstname: firstname,
         surname: surname
        }).then(function (response) {
-        console.log(response);
         location.reload();
+        console.log(response);
     })
         .catch(function (error) {
             console.log(error);

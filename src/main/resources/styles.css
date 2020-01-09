@@ -1,4 +1,4 @@
-ul {
+    ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -32,107 +32,96 @@ ul {
     padding: 5px;
   }
 .Upper_Head{
-  background-color: #333;
-  border-radius: 10px;
-  width: 100%;
-  border: 2px;
-  border-color: black;
+    background-color: #333;
+    border-radius: 10px;
+    width: 100%;
+    border: 2px;
+    border-color: black;
 }
 .Navigation_Bar{
-  padding: 5px;
-  border: 2px;
-  border-color: white;
+    padding: 5px;
+    border: 2px;
+    border-color: white;
 }
 th {
   background-color: #333;
   color: white;
 }
 
-.button,.btnAdd{
+.button,.btnAdd,.buttons{
     align-self: center;
-}
-.Buttons,.btnAdd {
-align-self: center;
-background-color: #999999;
-width: 25%;
-padding: 10px;
-border-radius: 10px;
-margin: 5px;
-}
-
-.See_Table_Button {
-  display: block;
-  background-color: #333;
-  color: white;
-  text-align: center;
-  margin: 5px;
-  padding: 14px 16px;
-  text-decoration: none;
-  border-radius: 10px;
-  
-}
-.See_Table_Button:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-.Edit_Records_Button{
-  display: block;
-  background-color: #333;
-  color: white;
-  text-align: center;
-  margin: 5px;
-  padding: 14px 16px;
-  text-decoration: none;
-  border-radius: 10px;
-}
-.Edit_Records_Button:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .Input{
-  align-self: center;
-    text-align: center;
-  background-color: #999999;
-  padding: 10px;
-  border-radius: 10px;
-  margin: 5px;
-}
-.Input_Add_User{
-    align-content: flex-end;
+    align-self: center;
     text-align: center;
     background-color: #999999;
     padding: 10px;
     border-radius: 10px;
     margin: 5px;
-    width: 35%;
 }
+
 .Intro{
     align-content: center;
     align-self: center;
     text-align: center;
 }
-.myClimbers{
-    align-content: center;
-    align-self: center;
-    text-align: center;
-}
-.UsersTable,.myClimbers,.Attempt_Table{
-    width: 85%;
-    padding: 10px;
+
+.UsersTable,TableHead,.TableBody,.TableRow,.TableElement,.Attempt_Table{
+    border: 5px solid #111111;
     margin: 5px;
+    padding: 5px;
+}
+
+.UsersTable,.Attempt_Table{
+    width: 85%;
     align-content: center;
     align-self: center;
     text-align: center;
     margin-left:auto;
     margin-right:auto;
-    border: #111111;
 }
 
-.edit, .save, .delete{
+.edit, .save, .delete,.InUse{
+    display: block;
     align-self: center;
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 5px;
+    margin: 5px auto;
 }
 .edit,.save,.delete:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.NotInUse{
+    display: none;
+
+}
+
+.ButtonBackground{
+    background-color: white;
+    border: 1px #111111;
+    padding: 5px;
+    width: 35%;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    margin: 2px auto;
+}
+
+.LargeButton{
+    display: block;
+    background-color: #333;
+    color: white;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    margin: 5px;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+.LargeButton:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }

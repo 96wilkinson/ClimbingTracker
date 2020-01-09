@@ -48,7 +48,7 @@ function save_row(no)
         month: month,
         year: year,
         difficulty: difficulty,
-        timeSpent: time_spent
+        timeSpent: timeSpent
        }).then(function (response) {
         console.log(response);
         location.reload();

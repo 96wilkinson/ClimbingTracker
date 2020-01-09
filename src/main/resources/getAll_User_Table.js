@@ -53,15 +53,18 @@ axios.get('http://localhost:8080/demo/climberapp/getAll').then (({data: myClimbe
 
         // CREATE TABLE BODY .
 		let tBody = document.createElement("tbody");
+
 			
 		// ADD COLUMN HEADER TO ROW OF TABLE HEAD.
 		for (let i = 0; i < myClimbers.length; i++) {
 			let bRow = document.createElement("tr"); // CREATE ROW FOR EACH RECORD .
+            bRow.className = "TableRow";
             let User_id = myClimbers[i][columns[0]];
 
 			for (let j = 0; j < columns.length; j++) {
                 let td = document.createElement("td");
                 td.innerHTML = myClimbers[i][columns[j]];
+                td.className = "TableElement";
                 switch (j){
                     case j = 0:
                         y = "Climber_ID";
