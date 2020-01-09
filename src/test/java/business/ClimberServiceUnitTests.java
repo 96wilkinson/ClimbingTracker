@@ -43,8 +43,8 @@ public class ClimberServiceUnitTests {
 		this.climberList = new ArrayList<>();
 		this.climberList.add(testClimber);
 		this.testClimber = new Climber("96Wilkinson", "Tony", "Wilkinson");
-		this.testClimberWithID = new Climber(testClimber.getUserName(), testClimber.getFirstName(),
-				testClimber.getSurName());
+		this.testClimberWithID = new Climber(testClimber.getUsername(), testClimber.getFirstname(),
+				testClimber.getSurname());
 		this.testClimberWithID.setId(id);
 	}
 

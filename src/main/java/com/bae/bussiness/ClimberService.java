@@ -30,9 +30,9 @@ public class ClimberService {
 
 	public Climber updateClimber(Climber climber, Long id) {
 		Climber toUpdate = findClimberById(id);
-		toUpdate.setUserName(climber.getUserName());
-		toUpdate.setFirstName(climber.getFirstName());
-		toUpdate.setSurName(climber.getSurName());
+		toUpdate.setUsername(climber.getUsername());
+		toUpdate.setFirstname(climber.getFirstname());
+		toUpdate.setSurname(climber.getSurname());
 		return this.climberRepo.save(toUpdate);
 	}
 

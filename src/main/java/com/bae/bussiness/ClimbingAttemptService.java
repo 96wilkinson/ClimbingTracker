@@ -32,7 +32,13 @@ public class ClimbingAttemptService {
 	}
 
 	public ClimbingAttempts updateClimbingAttempt(ClimbingAttempts climbingattempts, Long id) {
-		return climbingAttemptRepo.save(climbingattempts);
+		ClimbingAttempts toUpdate = findClimbingAttemptsById(id);
+		toUpdate.setDay(climbingattempts.getDay());
+		toUpdate.setMonth(climbingattempts.getMonth());
+		toUpdate.setYear(climbingattempts.getYear());
+		toUpdate.setDifficulty(climbingattempts.getDifficulty());
+		toUpdate.setTimeSpent(climbingattempts.getTimeSpent());
+		return this.climbingAttemptRepo.save(toUpdate);
 	}
 
 	public boolean deleteClimbingAttempt(Long climbAttemptId) {

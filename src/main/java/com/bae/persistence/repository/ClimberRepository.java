@@ -12,7 +12,7 @@ import com.bae.persistence.domain.Climber;
 @Repository
 public interface ClimberRepository extends JpaRepository<Climber, Long> {
 
-	List<Climber> findByUserName(String userName);
+	List<Climber> findByUsername(String username);
 
 	
 }

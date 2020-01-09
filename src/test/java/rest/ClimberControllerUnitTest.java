@@ -8,7 +8,6 @@ import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import com.bae.bussiness.ClimberService;
 import com.bae.persistence.domain.Climber;
@@ -42,8 +41,8 @@ public class ClimberControllerUnitTest {
         this.climberList = new ArrayList<>();
         this.climberList.add(testClimber);
         this.testClimber = new Climber("96Wilkinson", "Tony", "Wilkinson");
-        this.testClimberWithId = new Climber(testClimber.getUserName(), testClimber.getFirstName(),
-                testClimber.getSurName());
+        this.testClimberWithId = new Climber(testClimber.getUsername(), testClimber.getFirstname(),
+                testClimber.getSurname());
         this.testClimberWithId.setId(id);
     }
     @Test
@@ -83,7 +82,7 @@ public class ClimberControllerUnitTest {
     public void updateClimbersTest() {
         // given
         Climber newClimber = new Climber("Sir Duckington esq.", "Blue", "Duckington Manor");
-        Climber updatedClimber = new Climber(newClimber.getUserName(), newClimber.getFirstName(), newClimber.getSurName());
+        Climber updatedClimber = new Climber(newClimber.getUsername(), newClimber.getFirstname(), newClimber.getSurname());
         updatedClimber.setId(this.id);
 
         when(this.service.updateClimber(newClimber, this.id)).thenReturn(updatedClimber);

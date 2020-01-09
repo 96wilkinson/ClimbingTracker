@@ -1,9 +1,6 @@
 package com.bae.persistence.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class ClimbingAttempts {
@@ -17,6 +14,7 @@ public class ClimbingAttempts {
 	private int difficulty;
 	private int timeSpent;
 
+	/*@ManyToOne*/
 	public ClimbingAttempts() {
 
 	}

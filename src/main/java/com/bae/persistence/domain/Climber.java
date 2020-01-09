@@ -11,19 +11,24 @@ public class Climber {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	private String userName;
-	private String firstName;
-	private String surName;
+	@Column(name="username")
+	private String username;
+
+	@Column(name="firstname")
+	private String firstname;
+
+	@Column(name="surname")
+	private String surname;
 
 	@OneToMany(cascade = CascadeType.ALL)
 	@Column(name = "Climber_Id")
 	private List<ClimbingAttempts> climbingAttempts;
 
-	public Climber(String userName, String firstName, String surName) {
+	public Climber(String username, String firstname, String surname) {
 		super();
-		this.userName = userName;
-		this.firstName = firstName;
-		this.surName = surName;
+		this.username = username;
+		this.firstname = firstname;
+		this.surname = surname;
 	}
 
 	public Climber() {
@@ -36,37 +41,37 @@ public class Climber {
 		this.id = id;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getFirstname() {
+		return firstname;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
 
-	public String getSurName() {
-		return surName;
+	public String getSurname() {
+		return surname;
 	}
 
-	public void setSurName(String surName) {
-		this.surName = surName;
+	public void setSurname(String surname) {
+		this.surname = surname;
 	}
 
 	@Override
 	public String toString() {
 		return "Climber{" +
 				"id=" + id +
-				", userName='" + userName + '\'' +
-				", firstName='" + firstName + '\'' +
-				", surName='" + surName + '\'' +
+				", username='" + username + '\'' +
+				", firstname='" + firstname + '\'' +
+				", surname='" + surname + '\'' +
 				'}';
 	}
 
@@ -76,9 +81,9 @@ public class Climber {
 		int result = 1;
 		result = prime * result + (int) (id ^ (id >>> 32));
 		result = prime * result + ((climbingAttempts == null) ? 0 : climbingAttempts.hashCode());
-		result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
-		result = prime * result + ((surName == null) ? 0 : surName.hashCode());
-		result = prime * result + ((userName == null) ? 0 : userName.hashCode());
+		result = prime * result + ((firstname == null) ? 0 : firstname.hashCode());
+		result = prime * result + ((surname == null) ? 0 : surname.hashCode());
+		result = prime * result + ((username == null) ? 0 : username.hashCode());
 		return result;
 	}
 
@@ -101,20 +106,20 @@ public class Climber {
 				return false;
 		} else if (!climbingAttempts.equals(other.climbingAttempts))
 			return false;
-		if (firstName == null) {
-			if (other.firstName != null)
+		if (firstname == null) {
+			if (other.firstname != null)
 				return false;
-		} else if (!firstName.equals(other.firstName))
+		} else if (!firstname.equals(other.firstname))
 			return false;
-		if (surName == null) {
-			if (other.surName != null)
+		if (surname == null) {
+			if (other.surname != null)
 				return false;
-		} else if (!surName.equals(other.surName))
+		} else if (!surname.equals(other.surname))
 			return false;
-		if (userName == null) {
-			if (other.userName != null)
+		if (username == null) {
+			if (other.username != null)
 				return false;
-		} else if (!userName.equals(other.userName))
+		} else if (!username.equals(other.username))
 			return false;
 		return true;
 	}
