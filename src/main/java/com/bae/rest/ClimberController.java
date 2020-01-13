@@ -15,41 +15,39 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bae.bussiness.ClimberService;
 import com.bae.persistence.domain.Climber;
 
-import javax.websocket.server.PathParam;
-
 @RestController
 @RequestMapping("/climberapp")
 public class ClimberController {
 
-	private ClimberService climberService;
+	private ClimberService service;
 
 	@Autowired
 	public ClimberController(ClimberService climberService) {
-		this.climberService = climberService;
+		this.service = climberService;
 	}
 
 	@GetMapping("/getAll")
 	public List<Climber> getAllClimber() {
-		return climberService.getAllClimber();
+		return service.getAllClimber();
 	}
 
 	@GetMapping("/get/{id}")
-	public Climber getClimber(@PathVariable Long id) { return this.climberService.findClimberById(id); }
+	public Climber getClimber(@PathVariable Long id) { return this.service.findClimberById(id); }
 
 	@PostMapping("/createClimber")
 	public Climber addNewClimber(@RequestBody Climber climber) {
 
-		return climberService.addNewClimber(climber);
+		return service.addNewClimber(climber);
 	}
 
 	@PutMapping("/updateClimber/{id}")
 	public Climber updateClimber(@PathVariable(value = "id") Long id,@RequestBody Climber climber) {
-		return climberService.updateClimber(climber, id);
+		return service.updateClimber(climber, id);
 	}
 
 	@DeleteMapping("/DeleteClimber/{id}")
 	public void deleteClimber(@PathVariable(value = "id") Long id) {
-		this.climberService.deleteClimber(id);
+		this.service.deleteClimber(id);
 	}
 
 }

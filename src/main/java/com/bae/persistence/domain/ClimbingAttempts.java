@@ -12,8 +12,9 @@ public class ClimbingAttempts {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@OneToMany
-	private List<Climber> climbers;
+	@ManyToOne
+	@JoinColumn(name = "climberId")
+	private Climber climbers;
 
 	private int day;
 	private int month;
@@ -21,19 +22,22 @@ public class ClimbingAttempts {
 	private int difficulty;
 	private int timeSpent;
 
-	/*@ManyToOne*/
-	public ClimbingAttempts() {
-
+	public Climber getClimber() {
+		return climbers;
 	}
 
-	public ClimbingAttempts(int day, int month, int year, int difficulty, int timeSpent, Climber... climbers) {
+	public void setClimbers(Climber climbers){
+		this.climbers = climbers;
+	}
+
+	public ClimbingAttempts(int day, int month, int year, int difficulty, int timeSpent, Climber climbers) {
 		super();
 		this.day = day;
 		this.month = month;
 		this.year = year;
 		this.difficulty = difficulty;
 		this.timeSpent = timeSpent;
-		this.climbers = Arrays.asList(climbers);
+		this.climbers = climbers;
 	}
 
 	public Long getId() { return id; }
@@ -80,14 +84,11 @@ public class ClimbingAttempts {
 		this.timeSpent = timeSpent;
 	}
 
-	public List<Climber> getClimbers() { return climbers; }
-
-	public void setClimbers(List<Climber> climbers) { this.climbers = climbers; }
 
 	@Override
 	public String toString() {
 		return "ClimbingAttempts{" +
-				"climbers=" + climbers +
+				"id=" + id +
 				", day=" + day +
 				", month=" + month +
 				", year=" + year +

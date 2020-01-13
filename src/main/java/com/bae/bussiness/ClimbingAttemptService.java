@@ -32,7 +32,7 @@ public class ClimbingAttemptService {
 		return this.AttemptRepo.findById(id).orElseThrow(() -> new ClimbingAttemptNotFoundException());
 	}
 
-	public ClimbingAttempts addNewClimbingAttempts(ClimbingAttempts climber) {
+	public ClimbingAttempts addNewClimbingAttempts(ClimbingAttempts climber,Long climberId) {
 		return AttemptRepo.save(climber);
 	}
 
@@ -46,11 +46,12 @@ public class ClimbingAttemptService {
 		return this.AttemptRepo.save(toUpdate);
 	}
 
-	public ClimbingAttempts addClimberToClimbingAttempts(long id, Climber climber) {
+
+/*	public ClimbingAttempts addClimberToClimbingAttempts(long id, Climber climber) {
 		ClimbingAttempts toUpdate = findClimbingAttemptsById(id);
-		/*toUpdate.set*/
-		return this.AttemptRepo.save(toUpdate);
-	}
+		toUpdate.getClimbers().add(climber);
+		return this.AttemptRepo.saveAndFlush(toUpdate);
+	}*/
 
 	public boolean deleteClimbingAttempt(Long climbAttemptId) {
 		if (!this.AttemptRepo.existsById(climbAttemptId)) {

@@ -1,4 +1,3 @@
-/*
 package persistance;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -38,9 +37,8 @@ public class ClimberRepoTest {
 
 	@Test
 	public void testFindByName() {
-		assertThat(this.repo.findByUserName(this.TEST_USER)).containsExactly(this.testSavedClimber);
+		assertThat(this.repo.findByUsername(this.TEST_USER)).containsExactly(this.testSavedClimber);
 	}
 
 }
 
-*/

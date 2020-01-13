@@ -2,15 +2,9 @@ package com.bae.rest;
 
 import java.util.List;
 
+import com.bae.persistence.domain.Climber;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.bae.bussiness.ClimbingAttemptService;
 import com.bae.persistence.domain.ClimbingAttempts;
@@ -19,35 +13,42 @@ import com.bae.persistence.domain.ClimbingAttempts;
 @RequestMapping("/climberapp")
 public class ClimbingAttemptController {
 
-	private ClimbingAttemptService climbingAttemptService;
+	private ClimbingAttemptService Service;
 
 	@Autowired
 	public ClimbingAttemptController(ClimbingAttemptService service) {
 		super();
-		this.climbingAttemptService = service;
+		this.Service = service;
 	}
 
 	@GetMapping("/getAllClimbingAttempts")
 	public List<ClimbingAttempts> getAllClimbingAttempts() {
-		return climbingAttemptService.getAllClimbingAttempts();
+		return Service.getAllClimbingAttempts();
 	}
 
 	@GetMapping("/getClimbingAttempt/{id}")
-	public ClimbingAttempts getClimbingAttempts(@PathVariable Long id) { return this.climbingAttemptService.findClimbingAttemptsById(id); }
+	public ClimbingAttempts getClimbingAttempts(@PathVariable Long id) { return this.Service.findClimbingAttemptsById(id); }
 
-	@PostMapping("/createClimbingAttempt")
-	public ClimbingAttempts addNewClimber(@RequestBody ClimbingAttempts climber) {
-		return climbingAttemptService.addNewClimbingAttempts(climber);
+	@PostMapping("/createClimbingAttempt/{climberId}")
+	public ClimbingAttempts addNewClimbingAttempts(@RequestBody ClimbingAttempts addNewClimbingAttempts,
+                                                   @PathVariable("climberId") Long climberId) {
+		return Service.addNewClimbingAttempts(addNewClimbingAttempts,climberId);
 	}
 
-	@PutMapping("/updateClimbingAttempt/{id}")
+	@PutMapping("/updateClimbingAttempt")
 	public ClimbingAttempts updateClimber(@PathVariable(value = "id") Long id,@RequestBody ClimbingAttempts climbingAttempts) {
-		return climbingAttemptService.updateClimbingAttempt(climbingAttempts,id);
+		return Service.updateClimbingAttempt(climbingAttempts,id);
 	}
+
+/*	@PatchMapping("/updateClimbingAttempt/{id}")
+	public ClimbingAttempts addClimberToClimbingAttempts(@PathVariable Long id, @RequestBody Climber climber)
+	{
+		return this.Service.addClimberToClimbingAttempts(id,climber);
+	}*/
 
 	@DeleteMapping("/DeleteClimbingAttempt/{id}")
 	public void deleteClimbingAttempt(@PathVariable(value = "id") Long id) {
-		this.climbingAttemptService.deleteClimbingAttempt(id);
+		this.Service.deleteClimbingAttempt(id);
 	}
 
 }

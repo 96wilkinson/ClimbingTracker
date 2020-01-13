@@ -21,9 +21,8 @@ public class Climber {
 	@Column(name="surname")
 	private String surname;
 
-	/*@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "Climber_Id")
-	private List<ClimbingAttempts> climbingAttempts;*/
+	@OneToMany(mappedBy = "climber")
+	private List<ClimbingAttempts> climbingAttempts;
 
 	public Climber(String username, String firstname, String surname) {
 		super();
@@ -85,11 +84,12 @@ public class Climber {
 		return Objects.equals(id, climber.id) &&
 				Objects.equals(username, climber.username) &&
 				Objects.equals(firstname, climber.firstname) &&
-				Objects.equals(surname, climber.surname);
+				Objects.equals(surname, climber.surname) &&
+				Objects.equals(climbingAttempts, climber.climbingAttempts);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, username, firstname, surname);
+		return Objects.hash(id, username, firstname, surname, climbingAttempts);
 	}
 }

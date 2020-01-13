@@ -1,4 +1,7 @@
 
+
+
+
 INSERT INTO Climber (username,firstname,surname) VALUES
     ('Scrappy','John', 'Gordon'),
     ('96wilkinson','Anthony','Wilkinson'),

@@ -1,10 +1,10 @@
-/*
 package persistance;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.*;
 
 import com.bae.Application;
+import com.bae.persistence.domain.Climber;
 import com.bae.persistence.domain.ClimbingAttempts;
 import com.bae.persistence.repository.ClimbingAttemptRepository;
 import org.junit.Before;
@@ -23,7 +23,9 @@ public class ClimbingAttemptRepoTest {
     @Autowired
     private ClimbingAttemptRepository repo;
 
-    private final ClimbingAttempts TEST_Attempt = new ClimbingAttempts(18,12,1996, 3, 4);
+    private final Climber TEST_CLIMBER = new Climber("96wilkinson","Anthony","wilkinson");
+
+    private final ClimbingAttempts TEST_Attempt = new ClimbingAttempts(18,12,1996, 3, 4,TEST_CLIMBER);
 
     private ClimbingAttempts testSavedAttempt;
 
@@ -34,9 +36,8 @@ public class ClimbingAttemptRepoTest {
     }
 
     @Test
-    public void testFindByName() {
+    public void testFindById() {
         assertThat(this.repo.findClimbingAttemptsById(this.TEST_Attempt)).containsExactly(this.testSavedAttempt);
     }
 
 }
-*/

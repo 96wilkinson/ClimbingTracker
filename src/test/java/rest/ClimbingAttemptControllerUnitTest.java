@@ -47,7 +47,7 @@ public class ClimbingAttemptControllerUnitTest {
     public void createClimbingAttemptTest() {
         when(this.service.addNewClimbingAttempts(testClimbingAttempt)).thenReturn(testClimbingAttemptWithId);
 
-        assertEquals(this.testClimbingAttemptWithId, this.controller.addNewClimber(testClimbingAttempt));
+        assertEquals(this.testClimbingAttemptWithId, this.controller.addNewClimbingAttempts(testClimbingAttempt));
 
         verify(this.service, times(1)).addNewClimbingAttempts(this.testClimbingAttempt);
     }

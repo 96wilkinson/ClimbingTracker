@@ -36,22 +36,24 @@ public class ClimbingAttemptServiceUnitTests {
 
 	private final long id = 1L;
 
+	Climber testClimber = new Climber("96wilkinson","Anthony","Wilkinson");
+
 	@Before
 	public void init() {
 		this.climbingAttemptList = new ArrayList<>();
 		this.climbingAttemptList.add(testClimbingAttempt);
-		this.testClimbingAttempt = new ClimbingAttempts(18,12,1996,3,5);
+		this.testClimbingAttempt = new ClimbingAttempts(1,18,12,1996,3,testClimber);
 		this.testClimbingAttemptWithID = new ClimbingAttempts(testClimbingAttempt.getDay(),testClimbingAttempt.getMonth()
-				,testClimbingAttempt.getYear(),testClimbingAttempt.getDifficulty(),testClimbingAttempt.getTimeSpent());
+				,testClimbingAttempt.getYear(),testClimbingAttempt.getDifficulty(),testClimbingAttempt.getTimeSpent(),testClimbingAttempt.getClimber());
 		this.testClimbingAttemptWithID.setId(id);
 	}
 
 	@Test
 	public void createClimbingAttemptTest() {
+
+		testClimber.setId(1L);
 		when(this.repo.save(testClimbingAttempt)).thenReturn(testClimbingAttemptWithID);
-
-		assertEquals(this.testClimbingAttemptWithID, this.service.addNewClimbingAttempts(testClimbingAttempt));
-
+		assertEquals(this.testClimbingAttemptWithID, this.service.addNewClimbingAttempts(testClimbingAttempt,1L));
 		verify(this.repo, times(1)).save(this.testClimbingAttempt);
 	}
 

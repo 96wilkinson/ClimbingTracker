@@ -1,4 +1,3 @@
-/*
 package business;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -70,11 +69,10 @@ public class ClimberServiceIntegrationTest {
 	@Test
 	public void testUpdateClimber() {
 		Climber newClimber = new Climber("AJohn123", "Avery", "Johnston");
-		Climber updatedClimber = new Climber(newClimber.getUserName(), newClimber.getFirstName(),newClimber.getSurName());
+		Climber updatedClimber = new Climber(newClimber.getUsername(), newClimber.getFirstname(),newClimber.getSurname());
 		updatedClimber.setId(this.testClimberWithID.getId());
 
 		assertThat(this.service.updateClimber(newClimber, this.testClimberWithID.getId())).isEqualTo(updatedClimber);
 	}
 
 }
-*/
