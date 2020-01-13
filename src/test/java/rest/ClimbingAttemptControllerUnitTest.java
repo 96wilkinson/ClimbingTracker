@@ -1,3 +1,4 @@
+/*
 package rest;
 
 import com.bae.bussiness.ClimbingAttemptService;
@@ -91,3 +92,4 @@ public class ClimbingAttemptControllerUnitTest {
         verify(this.service, times(1)).updateClimbingAttempt(newClimbingAttempt, this.id);
     }
 }
+*/

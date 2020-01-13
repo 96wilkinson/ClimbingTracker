@@ -21,7 +21,8 @@ public class Climber {
 	@Column(name="surname")
 	private String surname;
 
-	@OneToMany(mappedBy = "climber")
+	@OneToMany(mappedBy = "climber",cascade=CascadeType.ALL)
+	@JoinColumn(name = "climber_id")
 	private List<ClimbingAttempts> climbingAttempts;
 
 	public Climber(String username, String firstname, String surname) {
@@ -29,10 +30,6 @@ public class Climber {
 		this.username = username;
 		this.firstname = firstname;
 		this.surname = surname;
-	}
-
-	public Climber() {
-
 	}
 
 	public Long getId() {return id;}
@@ -65,6 +62,13 @@ public class Climber {
 		this.surname = surname;
 	}
 
+	public List<ClimbingAttempts> getClimbingAttempts() {
+		return climbingAttempts;
+	}
+
+	public void setClimbingAttempts(List<ClimbingAttempts> climbingAttempts) {
+		this.climbingAttempts = climbingAttempts;
+	}
 
 	@Override
 	public String toString() {

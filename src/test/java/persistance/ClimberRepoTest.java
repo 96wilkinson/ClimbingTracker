@@ -1,10 +1,14 @@
 package persistance;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.ContextConfiguration;
@@ -27,18 +31,22 @@ public class ClimberRepoTest {
 
 	private final Climber TEST_CLIMBER = new Climber(TEST_USER, "Neeven", "Valydon");
 
+
 	private Climber testSavedClimber;
 
 	@Before
 	public void init() {
+		MockitoAnnotations.initMocks(this);
 		this.repo.deleteAll();
 		this.testSavedClimber = this.repo.save(this.TEST_CLIMBER);
+
 	}
 
 	@Test
 	public void testFindByName() {
 		assertThat(this.repo.findByUsername(this.TEST_USER)).containsExactly(this.testSavedClimber);
 	}
+
 
 }
 

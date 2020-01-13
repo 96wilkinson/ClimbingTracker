@@ -12,32 +12,20 @@ public class ClimbingAttempts {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@ManyToOne
-	@JoinColumn(name = "climberId")
-	private Climber climbers;
-
 	private int day;
 	private int month;
 	private int year;
 	private int difficulty;
 	private int timeSpent;
 
-	public Climber getClimber() {
-		return climbers;
-	}
 
-	public void setClimbers(Climber climbers){
-		this.climbers = climbers;
-	}
-
-	public ClimbingAttempts(int day, int month, int year, int difficulty, int timeSpent, Climber climbers) {
+	public ClimbingAttempts(int day, int month, int year, int difficulty, int timeSpent) {
 		super();
 		this.day = day;
 		this.month = month;
 		this.year = year;
 		this.difficulty = difficulty;
 		this.timeSpent = timeSpent;
-		this.climbers = climbers;
 	}
 
 	public Long getId() { return id; }
@@ -107,12 +95,11 @@ public class ClimbingAttempts {
 				year == that.year &&
 				difficulty == that.difficulty &&
 				timeSpent == that.timeSpent &&
-				Objects.equals(id, that.id) &&
-				Objects.equals(climbers, that.climbers);
+				Objects.equals(id, that.id);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, climbers, day, month, year, difficulty, timeSpent);
+		return Objects.hash(id, day, month, year, difficulty, timeSpent);
 	}
 }
