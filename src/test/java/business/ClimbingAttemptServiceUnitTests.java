@@ -1,4 +1,3 @@
-/*
 package business;
 
 import com.bae.bussiness.ClimbingAttemptService;
@@ -43,9 +42,9 @@ public class ClimbingAttemptServiceUnitTests {
 	public void init() {
 		this.climbingAttemptList = new ArrayList<>();
 		this.climbingAttemptList.add(testClimbingAttempt);
-		this.testClimbingAttempt = new ClimbingAttempts(1,18,12,1996,3,testClimber);
+		this.testClimbingAttempt = new ClimbingAttempts(1,18,12,1996,3);
 		this.testClimbingAttemptWithID = new ClimbingAttempts(testClimbingAttempt.getDay(),testClimbingAttempt.getMonth()
-				,testClimbingAttempt.getYear(),testClimbingAttempt.getDifficulty(),testClimbingAttempt.getTimeSpent(),testClimbingAttempt.getClimber());
+				,testClimbingAttempt.getYear(),testClimbingAttempt.getDifficulty(),testClimbingAttempt.getTimeSpent());
 		this.testClimbingAttemptWithID.setId(id);
 	}
 
@@ -85,4 +84,4 @@ public class ClimbingAttemptServiceUnitTests {
 
 		verify(repo, times(1)).findAll();
 	}
-}*/
+}

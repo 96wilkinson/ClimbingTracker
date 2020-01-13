@@ -1,14 +1,12 @@
 package persistance;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.assertEquals;
+
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.ContextConfiguration;
@@ -28,23 +26,33 @@ public class ClimberRepoTest {
 	private ClimberRepository repo;
 
 	private final String TEST_USER = "NivsValy";
+	private final String TEST_FIRST = "Neeven";
+	private final String TEST_SUR = "Valydon";
 
-	private final Climber TEST_CLIMBER = new Climber(TEST_USER, "Neeven", "Valydon");
+	private final Climber TEST_CLIMBER = new Climber(TEST_USER, TEST_FIRST, TEST_SUR);
 
 
 	private Climber testSavedClimber;
 
 	@Before
 	public void init() {
-		MockitoAnnotations.initMocks(this);
 		this.repo.deleteAll();
 		this.testSavedClimber = this.repo.save(this.TEST_CLIMBER);
-
 	}
 
 	@Test
-	public void testFindByName() {
+	public void testFindByUserName() {
 		assertThat(this.repo.findByUsername(this.TEST_USER)).containsExactly(this.testSavedClimber);
+	}
+
+	@Test
+	public void testFindByFirstName(){
+		assertThat(this.repo.findByFirstname(this.TEST_FIRST)).containsExactly(this.testSavedClimber);
+	}
+
+	@Test
+	public void testFindBySurName(){
+		assertThat(this.repo.findBySurname(this.TEST_SUR)).containsExactly(this.testSavedClimber);
 	}
 
 

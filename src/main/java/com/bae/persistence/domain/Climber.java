@@ -22,7 +22,7 @@ public class Climber {
 	@Column(name="surname")
 	private String surname;
 
-	@ManyToOne
+	@ManyToOne(targetEntity = ClimbingAttempts.class)
 	private List<ClimbingAttempts> climbingAttempts;
 
 	public Climber(String username, String firstname, String surname,ClimbingAttempts... climbingAttempts) {
@@ -31,6 +31,10 @@ public class Climber {
 		this.firstname = firstname;
 		this.surname = surname;
 		this.climbingAttempts = Arrays.asList(climbingAttempts);
+	}
+
+	public Climber(){
+
 	}
 
 	public Long getId() {return id;}

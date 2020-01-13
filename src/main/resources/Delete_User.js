@@ -6,7 +6,7 @@ Remove_User = function(event){
     id = this.id.slice(-1);
     console.log(id)
 
-    axios.delete(BASE_URL+id/*, {data:{id:id}}*/)
+    axios.delete(BASE_URL+id)
         .then(function (response) {
             console.log("Deleted User with ID of" + id)
             console.log(response);

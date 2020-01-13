@@ -10,4 +10,9 @@ import com.bae.persistence.domain.ClimbingAttempts;
 public interface ClimbingAttemptRepository extends JpaRepository<ClimbingAttempts, Long>{
 
     List<ClimbingAttempts> findClimbingAttemptsById(ClimbingAttempts id);
+    List<ClimbingAttempts> findClimbingAttemptsByDay(ClimbingAttempts id);
+    List<ClimbingAttempts> findClimbingAttemptsByMonth(ClimbingAttempts id);
+    List<ClimbingAttempts> findClimbingAttemptsByYear(ClimbingAttempts id);
+    List<ClimbingAttempts> findClimbingAttemptsByDifficulty(ClimbingAttempts id);
+    List<ClimbingAttempts> findClimbingAttemptsByTimeSpent(ClimbingAttempts id);
 }

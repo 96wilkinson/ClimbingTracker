@@ -36,7 +36,27 @@ public class ClimbingAttemptRepoTest {
     }
 
     @Test
-    public void testFindById() {
+    public void testFindByDay() {
+        assertThat(this.repo.findClimbingAttemptsById(this.TEST_Attempt)).containsExactly(this.testSavedAttempt);
+    }
+
+    @Test
+    public void testFindByMonth() {
+        assertThat(this.repo.findClimbingAttemptsById(this.TEST_Attempt)).containsExactly(this.testSavedAttempt);
+    }
+
+    @Test
+    public void testFindByYear() {
+        assertThat(this.repo.findClimbingAttemptsById(this.TEST_Attempt)).containsExactly(this.testSavedAttempt);
+    }
+
+    @Test
+    public void testFindByDifficulty() {
+        assertThat(this.repo.findClimbingAttemptsById(this.TEST_Attempt)).containsExactly(this.testSavedAttempt);
+    }
+
+    @Test
+    public void testFindByTimeSpent() {
         assertThat(this.repo.findClimbingAttemptsById(this.TEST_Attempt)).containsExactly(this.testSavedAttempt);
     }
 

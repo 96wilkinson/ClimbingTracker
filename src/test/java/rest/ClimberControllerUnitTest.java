@@ -81,7 +81,7 @@ public class ClimberControllerUnitTest {
     @Test
     public void updateClimbersTest() {
         // given
-        Climber newClimber = new Climber("Sir Duckington esq.", "Blue", "Duckington Manor");
+        Climber newClimber = new Climber("duck_duck", "duck", "duck");
         Climber updatedClimber = new Climber(newClimber.getUsername(), newClimber.getFirstname(), newClimber.getSurname());
         updatedClimber.setId(this.id);
 
