@@ -1,4 +1,3 @@
-/*
 package persistance;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -26,7 +25,7 @@ public class ClimbingAttemptRepoTest {
 
     private final Climber TEST_CLIMBER = new Climber("96wilkinson","Anthony","wilkinson");
 
-    private final ClimbingAttempts TEST_Attempt = new ClimbingAttempts(18,12,1996, 3, 4,TEST_CLIMBER);
+    private final ClimbingAttempts TEST_Attempt = new ClimbingAttempts(18,12,1996, 3, 4);
 
     private ClimbingAttempts testSavedAttempt;
 
@@ -42,4 +41,3 @@ public class ClimbingAttemptRepoTest {
     }
 
 }
-*/

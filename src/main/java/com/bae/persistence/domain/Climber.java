@@ -1,5 +1,6 @@
 package com.bae.persistence.domain;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,15 +22,15 @@ public class Climber {
 	@Column(name="surname")
 	private String surname;
 
-	@OneToMany(mappedBy = "climber",cascade=CascadeType.ALL)
-	@JoinColumn(name = "climber_id")
+	@ManyToOne
 	private List<ClimbingAttempts> climbingAttempts;
 
-	public Climber(String username, String firstname, String surname) {
+	public Climber(String username, String firstname, String surname,ClimbingAttempts... climbingAttempts) {
 		super();
 		this.username = username;
 		this.firstname = firstname;
 		this.surname = surname;
+		this.climbingAttempts = Arrays.asList(climbingAttempts);
 	}
 
 	public Long getId() {return id;}
