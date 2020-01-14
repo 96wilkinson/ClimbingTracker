@@ -6,10 +6,13 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import com.bae.Application;
 import com.bae.persistence.domain.Climber;
+import com.bae.persistence.domain.ClimbingAttempts;
 import com.bae.persistence.repository.ClimberRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
@@ -41,11 +44,13 @@ public class ClimberControllerIntegrationTest {
 
     private Climber testClimberWithID;
 
+    Set<ClimbingAttempts> TEST_Attempt = new HashSet<ClimbingAttempts>();
+
     @Before
     public void init() {
         this.repo.deleteAll();
 
-        this.testClimber = new Climber("96wilkinson", "Tony", "Wilkinson");
+        this.testClimber = new Climber("96wilkinson", "Tony", "Wilkinson",TEST_Attempt);
         this.testClimberWithID = this.repo.save(this.testClimber);
         this.id = this.testClimberWithID.getId();
     }
@@ -69,8 +74,8 @@ public class ClimberControllerIntegrationTest {
     }
     @Test
     public void testUpdateClimber() throws Exception {
-        Climber newClimber = new Climber("Bear", "Bear", "Grylls");
-        Climber updatedClimber = new Climber(newClimber.getUsername(), newClimber.getFirstname(), newClimber.getSurname());
+        Climber newClimber = new Climber("Bear", "Bear", "Grylls",TEST_Attempt);
+        Climber updatedClimber = new Climber(newClimber.getUsername(), newClimber.getFirstname(), newClimber.getSurname(),newClimber.getClimbingAttempts());
         updatedClimber.setId(this.id);
 
         String result = this.mock

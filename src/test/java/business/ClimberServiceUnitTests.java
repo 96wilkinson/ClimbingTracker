@@ -6,10 +6,9 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
+import com.bae.persistence.domain.ClimbingAttempts;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -38,13 +37,15 @@ public class ClimberServiceUnitTests {
 
 	private final long id = 1L;
 
+	Set<ClimbingAttempts> TEST_Attempt = new HashSet<ClimbingAttempts>();
+
 	@Before
 	public void init() {
 		this.climberList = new ArrayList<>();
 		this.climberList.add(testClimber);
-		this.testClimber = new Climber("96Wilkinson", "Tony", "Wilkinson");
+		this.testClimber = new Climber("96Wilkinson", "Tony", "Wilkinson",TEST_Attempt);
 		this.testClimberWithID = new Climber(testClimber.getUsername(), testClimber.getFirstname(),
-				testClimber.getSurname());
+				testClimber.getSurname(),testClimber.getClimbingAttempts());
 		this.testClimberWithID.setId(id);
 	}
 

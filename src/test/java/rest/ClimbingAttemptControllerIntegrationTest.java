@@ -18,7 +18,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.request;
@@ -38,22 +40,28 @@ public class ClimbingAttemptControllerIntegrationTest {
 
     private Long id;
 
-    private ClimbingAttempts testClimbingAttempts;
+    private List<ClimbingAttempts> climbingAttemptList;
+
+    private ClimbingAttempts testClimbingAttempt;
+
+    Set<ClimbingAttempts> TEST_Attempt = new HashSet<ClimbingAttempts>();
 
     private ClimbingAttempts testClimbingAttemptsWithID;
 
     @Before
     public void init() {
-        this.testClimbingAttempts = new ClimbingAttempts(18,12,1996,3,5);
+        this.climbingAttemptList = new ArrayList<>();
+        this.testClimbingAttempt = new ClimbingAttempts(1,18,12,1996,3);
+        this.TEST_Attempt.add(testClimbingAttempt);
         this.repo.deleteAll();
-        this.testClimbingAttemptsWithID = this.repo.save(this.testClimbingAttempts);
+        this.testClimbingAttemptsWithID = this.repo.save(this.testClimbingAttempt);
         this.id = this.testClimbingAttemptsWithID.getId();
     }
     @Test
     public void testCreateClimbingAttempt() throws Exception {
         String result = this.mock
                 .perform(request(HttpMethod.POST, "/climberapp/createClimbingAttempt").contentType(MediaType.APPLICATION_JSON)
-                        .content(this.mapper.writeValueAsString(testClimbingAttempts)).accept(MediaType.APPLICATION_JSON))
+                        .content(this.mapper.writeValueAsString(testClimbingAttempt)).accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
         assertEquals(this.mapper.writeValueAsString(testClimbingAttemptsWithID), result);
     }

@@ -2,6 +2,7 @@ package rest;
 
 import com.bae.bussiness.ClimbingAttemptService;
 import com.bae.persistence.domain.ClimbingAttempts;
+
 import com.bae.rest.ClimbingAttemptController;
 import org.junit.Before;
 import org.junit.Test;
@@ -43,14 +44,15 @@ public class ClimbingAttemptControllerUnitTest {
                 testClimbingAttempt.getYear(),testClimbingAttempt.getDifficulty(),testClimbingAttempt.getTimeSpent());
         this.testClimbingAttemptWithId.setId(id);
     }
-/*    @Test
+    @Test
     public void createClimbingAttemptTest() {
-        when(this.service.addNewClimbingAttempts(testClimbingAttempt,Long)).thenReturn(testClimbingAttemptWithId);
+        when(this.service.addNewClimbingAttempts(testClimbingAttempt,id)).thenReturn(testClimbingAttemptWithId);
 
-        assertEquals(this.testClimbingAttemptWithId, this.controller.addNewClimbingAttempts(testClimbingAttempt));
+        assertEquals(this.testClimbingAttemptWithId, this.controller.addNewClimbingAttempts(testClimbingAttempt,id));
 
-        verify(this.service, times(1)).addNewClimbingAttempts(this.testClimbingAttempt);
-    }*/
+        verify(this.service, times(1)).addNewClimbingAttempts(this.testClimbingAttempt, id);
+    }
+
 
     @Test
     public void deleteClimbingAttemptTest() {

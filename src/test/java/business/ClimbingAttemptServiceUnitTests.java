@@ -11,9 +11,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -36,12 +34,13 @@ public class ClimbingAttemptServiceUnitTests {
 
 	private final long id = 1L;
 
-	Climber testClimber = new Climber("96wilkinson","Anthony","Wilkinson");
+	Set<ClimbingAttempts> TEST_Attempt = new HashSet<ClimbingAttempts>();
+
+	Climber testClimber = new Climber("96wilkinson","Anthony","Wilkinson",TEST_Attempt);
 
 	@Before
 	public void init() {
 		this.climbingAttemptList = new ArrayList<>();
-		this.climbingAttemptList.add(testClimbingAttempt);
 		this.testClimbingAttempt = new ClimbingAttempts(1,18,12,1996,3);
 		this.testClimbingAttemptWithID = new ClimbingAttempts(testClimbingAttempt.getDay(),testClimbingAttempt.getMonth()
 				,testClimbingAttempt.getYear(),testClimbingAttempt.getDifficulty(),testClimbingAttempt.getTimeSpent());

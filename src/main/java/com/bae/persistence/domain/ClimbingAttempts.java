@@ -1,10 +1,8 @@
 package com.bae.persistence.domain;
 
 import javax.persistence.*;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Objects;
-import javax.persistence.ManyToOne;
+
 
 @Entity
 public class ClimbingAttempts {
@@ -12,15 +10,11 @@ public class ClimbingAttempts {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
 	private int day;
 	private int month;
 	private int year;
 	private int difficulty;
 	private int timeSpent;
-
-	@ManyToOne
-	private List<Climber> climbers;
 
 
 	public ClimbingAttempts(int day, int month, int year, int difficulty, int timeSpent) {

@@ -7,10 +7,13 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import com.bae.bussiness.ClimberService;
 import com.bae.persistence.domain.Climber;
+import com.bae.persistence.domain.ClimbingAttempts;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -36,13 +39,15 @@ public class ClimberControllerUnitTest {
 
     private final long id = 1L;
 
+    Set<ClimbingAttempts> TEST_Attempt = new HashSet<ClimbingAttempts>();
+
     @Before
     public void init() {
         this.climberList = new ArrayList<>();
         this.climberList.add(testClimber);
-        this.testClimber = new Climber("96Wilkinson", "Tony", "Wilkinson");
+        this.testClimber = new Climber("96Wilkinson", "Tony", "Wilkinson",TEST_Attempt);
         this.testClimberWithId = new Climber(testClimber.getUsername(), testClimber.getFirstname(),
-                testClimber.getSurname());
+                testClimber.getSurname(),testClimber.getClimbingAttempts());
         this.testClimberWithId.setId(id);
     }
     @Test
@@ -81,8 +86,8 @@ public class ClimberControllerUnitTest {
     @Test
     public void updateClimbersTest() {
         // given
-        Climber newClimber = new Climber("duck_duck", "duck", "duck");
-        Climber updatedClimber = new Climber(newClimber.getUsername(), newClimber.getFirstname(), newClimber.getSurname());
+        Climber newClimber = new Climber("duck_duck", "duck", "duck",TEST_Attempt);
+        Climber updatedClimber = new Climber(newClimber.getUsername(), newClimber.getFirstname(), newClimber.getSurname(),newClimber.getClimbingAttempts());
         updatedClimber.setId(this.id);
 
         when(this.service.updateClimber(newClimber, this.id)).thenReturn(updatedClimber);

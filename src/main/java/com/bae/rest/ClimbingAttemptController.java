@@ -46,6 +46,7 @@ public class ClimbingAttemptController {
 		return this.Service.addClimberToClimbingAttempts(id,climber);
 	}*/
 
+
 	@DeleteMapping("/DeleteClimbingAttempt/{id}")
 	public void deleteClimbingAttempt(@PathVariable(value = "id") Long id) {
 		this.Service.deleteClimbingAttempt(id);
