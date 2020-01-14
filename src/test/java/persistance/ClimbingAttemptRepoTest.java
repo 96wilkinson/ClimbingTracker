@@ -23,8 +23,6 @@ public class ClimbingAttemptRepoTest {
     @Autowired
     private ClimbingAttemptRepository repo;
 
-    private final Climber TEST_CLIMBER = new Climber("96wilkinson","Anthony","wilkinson");
-
     private final ClimbingAttempts TEST_Attempt = new ClimbingAttempts(18,12,1996, 3, 4);
 
     private ClimbingAttempts testSavedAttempt;
@@ -36,28 +34,33 @@ public class ClimbingAttemptRepoTest {
     }
 
     @Test
-    public void testFindByDay() {
+    public void testFindById() {
         assertThat(this.repo.findClimbingAttemptsById(this.TEST_Attempt)).containsExactly(this.testSavedAttempt);
+    }
+
+    @Test
+    public void testFindByDay() {
+        assertThat(this.repo.findClimbingAttemptsByDay(this.TEST_Attempt)).containsExactly(this.testSavedAttempt);
     }
 
     @Test
     public void testFindByMonth() {
-        assertThat(this.repo.findClimbingAttemptsById(this.TEST_Attempt)).containsExactly(this.testSavedAttempt);
+        assertThat(this.repo.findClimbingAttemptsByMonth(this.TEST_Attempt)).containsExactly(this.testSavedAttempt);
     }
 
     @Test
     public void testFindByYear() {
-        assertThat(this.repo.findClimbingAttemptsById(this.TEST_Attempt)).containsExactly(this.testSavedAttempt);
+        assertThat(this.repo.findClimbingAttemptsByYear(this.TEST_Attempt)).containsExactly(this.testSavedAttempt);
     }
 
     @Test
     public void testFindByDifficulty() {
-        assertThat(this.repo.findClimbingAttemptsById(this.TEST_Attempt)).containsExactly(this.testSavedAttempt);
+        assertThat(this.repo.findClimbingAttemptsByDifficulty(this.TEST_Attempt)).containsExactly(this.testSavedAttempt);
     }
 
     @Test
     public void testFindByTimeSpent() {
-        assertThat(this.repo.findClimbingAttemptsById(this.TEST_Attempt)).containsExactly(this.testSavedAttempt);
+        assertThat(this.repo.findClimbingAttemptsByTimeSpent(this.TEST_Attempt)).containsExactly(this.testSavedAttempt);
     }
 
 }

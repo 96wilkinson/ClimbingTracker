@@ -4,6 +4,8 @@ import javax.persistence.*;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class ClimbingAttempts {
@@ -18,6 +20,9 @@ public class ClimbingAttempts {
 	private int difficulty;
 	private int timeSpent;
 
+	@ManyToOne
+	private Set<Climber> climbers;
+
 
 	public ClimbingAttempts(int day, int month, int year, int difficulty, int timeSpent) {
 		super();
@@ -26,6 +31,10 @@ public class ClimbingAttempts {
 		this.year = year;
 		this.difficulty = difficulty;
 		this.timeSpent = timeSpent;
+	}
+
+	public ClimbingAttempts(){
+
 	}
 
 

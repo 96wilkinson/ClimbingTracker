@@ -3,6 +3,7 @@ package persistance;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
+import com.bae.persistence.domain.ClimbingAttempts;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,12 +25,12 @@ public class ClimberRepoTest {
 
 	@Autowired
 	private ClimberRepository repo;
-
+	private final ClimbingAttempts TEST_Attempt = new ClimbingAttempts(18,12,1996, 3, 4);
 	private final String TEST_USER = "NivsValy";
 	private final String TEST_FIRST = "Neeven";
 	private final String TEST_SUR = "Valydon";
 
-	private final Climber TEST_CLIMBER = new Climber(TEST_USER, TEST_FIRST, TEST_SUR);
+	private final Climber TEST_CLIMBER = new Climber(TEST_USER, TEST_FIRST, TEST_SUR,TEST_Attempt);
 
 
 	private Climber testSavedClimber;

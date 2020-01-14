@@ -22,7 +22,8 @@ public class Climber {
 	@Column(name="surname")
 	private String surname;
 
-	@ManyToOne(targetEntity = ClimbingAttempts.class)
+	@OneToMany(targetEntity = ClimbingAttempts.class,cascade = CascadeType.ALL)
+	@JoinColumn(name = "climber_id")
 	private List<ClimbingAttempts> climbingAttempts;
 
 	public Climber(String username, String firstname, String surname,ClimbingAttempts... climbingAttempts) {
@@ -82,7 +83,7 @@ public class Climber {
 				", username='" + username + '\'' +
 				", firstname='" + firstname + '\'' +
 				", surname='" + surname + '\'' +
-				'}';
+				",climbingAttempts="+ climbingAttempts +'}';
 	}
 
 	@Override

@@ -1,9 +1,15 @@
     ul {
+
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
   }
   
   li {
@@ -16,6 +22,12 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
   }
   
   li a:hover {
@@ -30,18 +42,32 @@
     text-align: center;
     color: white;
     padding: 5px;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
   }
 .Upper_Head{
     background-color: #333;
     border-radius: 10px;
     width: 100%;
-    border: 2px;
-    border-color: black;
+    border: 2px black;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+
 }
 .Navigation_Bar{
     padding: 5px;
-    border: 2px;
-    border-color: white;
+    border: 2px white;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
 }
 th {
   background-color: #333;
@@ -53,12 +79,14 @@ th {
 }
 
 .Input{
+    align-content: center;
     align-self: center;
     text-align: center;
     background-color: #999999;
     padding: 10px;
     border-radius: 10px;
-    margin: 5px;
+    width: 50%;
+    margin: 5px auto;
 }
 
 .Intro{
@@ -100,29 +128,35 @@ th {
 }
 
 .ButtonBackground{
-    background-color: white;
-    border: 1px #111111;
+    background-color: #333;
+    color: #333;
+    border: 5px #111111;
     padding: 5px;
     width: 35%;
     align-content: center;
     align-self: center;
     text-align: center;
     margin: 2px auto;
+    border-radius: 10px;
 }
 
 .LargeButton{
     display: block;
-    background-color: #333;
+    background-color: #999999;
+    border: 5px#111111;
     color: white;
     align-content: center;
     align-self: center;
     text-align: center;
-    margin: 10px;
     padding: 14px 16px;
     text-decoration: none;
     border-radius: 10px;
     width: 45%;
+    margin: 10px auto;
+
 }
 .LargeButton:hover{
+    background-color: #999999;
+    border: 5px#111111;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
