@@ -3,7 +3,7 @@ package com.bae.persistence.domain;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
-
+import java.util.Set;
 import javax.persistence.*;
 
 @Entity
@@ -24,14 +24,14 @@ public class Climber {
 
 	@OneToMany(targetEntity = ClimbingAttempts.class,cascade = CascadeType.ALL)
 	@JoinColumn(name = "climber_id")
-	private List<ClimbingAttempts> climbingAttempts;
+	private Set<ClimbingAttempts> climbingAttempts;
 
-	public Climber(String username, String firstname, String surname,ClimbingAttempts... climbingAttempts) {
+	public Climber(String username, String firstname, String surname,Set<ClimbingAttempts> getClimbingAttempts) {
 		super();
 		this.username = username;
 		this.firstname = firstname;
 		this.surname = surname;
-		this.climbingAttempts = Arrays.asList(climbingAttempts);
+		this.climbingAttempts = climbingAttempts;
 	}
 
 	public Climber(){
@@ -68,11 +68,11 @@ public class Climber {
 		this.surname = surname;
 	}
 
-	public List<ClimbingAttempts> getClimbingAttempts() {
+	public Set<ClimbingAttempts> getClimbingAttempts() {
 		return climbingAttempts;
 	}
 
-	public void setClimbingAttempts(List<ClimbingAttempts> climbingAttempts) {
+	public void setClimbingAttempts(Set<ClimbingAttempts> climbingAttempts) {
 		this.climbingAttempts = climbingAttempts;
 	}
 

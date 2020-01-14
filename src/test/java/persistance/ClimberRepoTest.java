@@ -17,6 +17,10 @@ import com.bae.Application;
 import com.bae.persistence.repository.ClimberRepository;
 import com.bae.persistence.domain.Climber;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = Application.class)
 @DataJpaTest
@@ -25,7 +29,10 @@ public class ClimberRepoTest {
 
 	@Autowired
 	private ClimberRepository repo;
-	private final ClimbingAttempts TEST_Attempt = new ClimbingAttempts(18,12,1996, 3, 4);
+	private Set<ClimbingAttempts> TEST_Attempt = new HashSet<ClimbingAttempts>();
+	Integer[] array = new Integer[]{ 18,12,1996, 3, 4};
+//	TEST_Attempt.addAll(Arrays.asL);
+//	array.
 	private final String TEST_USER = "NivsValy";
 	private final String TEST_FIRST = "Neeven";
 	private final String TEST_SUR = "Valydon";

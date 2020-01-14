@@ -4,7 +4,6 @@ import javax.persistence.*;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -21,7 +20,7 @@ public class ClimbingAttempts {
 	private int timeSpent;
 
 	@ManyToOne
-	private Set<Climber> climbers;
+	private List<Climber> climbers;
 
 
 	public ClimbingAttempts(int day, int month, int year, int difficulty, int timeSpent) {
