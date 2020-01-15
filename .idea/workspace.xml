@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01c2b075-2d4b-4731-aa83-61930d0a8505" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bae/persistence/domain/Climber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bae/persistence/domain/Climber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bae/persistence/domain/ClimbingAttempts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bae/persistence/domain/ClimbingAttempts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bae/persistence/repository/ClimbingAttemptRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bae/persistence/repository/ClimbingAttemptRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bae/rest/ClimbingAttemptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bae/rest/ClimbingAttemptController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/business/ClimberServiceIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/business/ClimberServiceIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/business/ClimberServiceUnitTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/business/ClimberServiceUnitTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/business/ClimbingAttemptServiceUnitTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/business/ClimbingAttemptServiceUnitTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/persistance/ClimberRepoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/persistance/ClimberRepoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/persistance/ClimbingAttemptRepoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/persistance/ClimbingAttemptRepoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rest/ClimberControllerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rest/ClimberControllerIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rest/ClimberControllerUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rest/ClimberControllerUnitTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/rest/ClimbingAttemptControllerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rest/ClimbingAttemptControllerIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rest/ClimbingAttemptControllerUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rest/ClimbingAttemptControllerUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,16 +42,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.All in Application (2)">
-    <configuration name="All in Application (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Application" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in Application (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ClimberRepoTest">
+    <configuration name="All in Application" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Application" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -83,33 +66,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClimbingAttemptRepoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClimbingAttemptControllerIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Application" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="persistance.*" />
+          <option name="PATTERN" value="rest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="persistance" />
-      <option name="MAIN_CLASS_NAME" value="persistance.ClimbingAttemptRepoTest" />
+      <option name="PACKAGE_NAME" value="rest" />
+      <option name="MAIN_CLASS_NAME" value="rest.ClimbingAttemptControllerIntegrationTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClimbingAttemptRepoTest.testFindById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClimbingAttemptControllerIntegrationTest.testCreateClimbingAttempt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Application" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="persistance.*" />
+          <option name="PATTERN" value="rest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="persistance" />
-      <option name="MAIN_CLASS_NAME" value="persistance.ClimbingAttemptRepoTest" />
-      <option name="METHOD_NAME" value="testFindById" />
+      <option name="PACKAGE_NAME" value="rest" />
+      <option name="MAIN_CLASS_NAME" value="rest.ClimbingAttemptControllerIntegrationTest" />
+      <option name="METHOD_NAME" value="testCreateClimbingAttempt" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.bae.persistence.repository in Application" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bae.persistence.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bae.persistence.repository" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -123,11 +120,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in Application (2)" />
-        <item itemvalue="JUnit.All in Application (1)" />
         <item itemvalue="JUnit.ClimberRepoTest" />
-        <item itemvalue="JUnit.ClimbingAttemptRepoTest" />
-        <item itemvalue="JUnit.ClimbingAttemptRepoTest.testFindById" />
+        <item itemvalue="JUnit.ClimbingAttemptControllerIntegrationTest.testCreateClimbingAttempt" />
+        <item itemvalue="JUnit.ClimbingAttemptControllerIntegrationTest" />
+        <item itemvalue="JUnit.All in Application" />
+        <item itemvalue="JUnit.com.bae.persistence.repository in Application" />
       </list>
     </recent_temporary>
   </component>
@@ -159,7 +156,10 @@
       <workItem from="1578997825973" duration="605000" />
       <workItem from="1578999966392" duration="8325000" />
       <workItem from="1579015545945" duration="2609000" />
-      <workItem from="1579018738914" duration="8315000" />
+      <workItem from="1579018738914" duration="9627000" />
+      <workItem from="1579084125425" duration="6000" />
+      <workItem from="1579084165797" duration="17000" />
+      <workItem from="1579088038239" duration="8612000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1578926163052</created>
@@ -196,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579015851748</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Tests 30/44 passed so far">
+      <created>1579027397151</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1579027397151</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,21 +226,22 @@
     <MESSAGE value="test" />
     <MESSAGE value="Getting backend to work through tests" />
     <MESSAGE value="For Tadas" />
-    <option name="LAST_COMMIT_MESSAGE" value="For Tadas" />
+    <MESSAGE value="Tests 30/44 passed so far" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tests 30/44 passed so far" />
   </component>
   <component name="WindowStateProjectService">
     <state x="588" y="214" width="800" height="677" key="#Assign_Data_Sources" timestamp="1579016961088">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="588" y="214" width="800" height="677" key="#Assign_Data_Sources/67.27.1853.1053@67.27.1853.1053" timestamp="1579016961088" />
-    <state x="167" y="125" width="1653" height="855" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1578942107961">
+    <state x="167" y="125" width="1653" height="855" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1579096651350">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="167" y="125" width="1653" height="855" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1578942107961" />
-    <state x="801" y="239" width="374" height="626" key="#com.intellij.ide.util.MemberChooser" timestamp="1579015788541">
+    <state x="167" y="125" width="1653" height="855" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579096651350" />
+    <state x="801" y="239" width="374" height="626" key="#com.intellij.ide.util.MemberChooser" timestamp="1579095003707">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="801" y="239" width="374" height="626" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1579015788541" />
+    <state x="801" y="239" width="374" height="626" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1579095003707" />
     <state x="834" y="444" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1578906929537">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -242,46 +250,46 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="513" y="27" width="951" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579019607731" />
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1579015850811">
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1579027397018">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579015850811" />
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579027397018" />
     <state x="242" y="116" width="1482" height="872" key="DiffContextDialog" timestamp="1579015701381">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="242" y="116" width="1482" height="872" key="DiffContextDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579015701381" />
-    <state width="1807" height="344" key="GridCell.Tab.0.bottom" timestamp="1579027348378">
+    <state width="1807" height="344" key="GridCell.Tab.0.bottom" timestamp="1579101991391">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579027348378" />
-    <state width="1807" height="344" key="GridCell.Tab.0.center" timestamp="1579027348377">
+    <state width="1807" height="344" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579101991391" />
+    <state width="1807" height="344" key="GridCell.Tab.0.center" timestamp="1579101991391">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579027348377" />
-    <state width="1807" height="344" key="GridCell.Tab.0.left" timestamp="1579027348377">
+    <state width="1807" height="344" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579101991391" />
+    <state width="1807" height="344" key="GridCell.Tab.0.left" timestamp="1579101991389">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579027348377" />
-    <state width="1807" height="344" key="GridCell.Tab.0.right" timestamp="1579027348378">
+    <state width="1807" height="344" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579101991389" />
+    <state width="1807" height="344" key="GridCell.Tab.0.right" timestamp="1579101991391">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579027348378" />
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1579027348205">
+    <state width="1807" height="344" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579101991391" />
+    <state width="1807" height="344" key="GridCell.Tab.1.bottom" timestamp="1579101991265">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579027348205" />
-    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1579027348205">
+    <state width="1807" height="344" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579101991265" />
+    <state width="1807" height="344" key="GridCell.Tab.1.center" timestamp="1579101991265">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579027348205" />
-    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1579027348205">
+    <state width="1807" height="344" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579101991265" />
+    <state width="1807" height="344" key="GridCell.Tab.1.left" timestamp="1579101991265">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579027348205" />
-    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1579027348205">
+    <state width="1807" height="344" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579101991265" />
+    <state width="1807" height="344" key="GridCell.Tab.1.right" timestamp="1579101991265">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579027348205" />
+    <state width="1807" height="344" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579101991265" />
     <state width="1807" height="344" key="GridCell.Tab.2.bottom" timestamp="1579015533446">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -302,14 +310,22 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="761" y="277" width="454" height="550" key="RollbackChangesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579015702401" />
+    <state x="780" y="258" width="416" height="589" key="VCS.ChangeListViewerDialog" timestamp="1579096744302">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="780" y="258" width="416" height="589" key="VCS.ChangeListViewerDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579096744302" />
     <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579015856628">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579015856628" />
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1579018739285">
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1579088037818">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579018739285" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579088037818" />
+    <state x="761" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579100948282">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="761" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579100948282" />
     <state x="720" y="266" width="537" height="572" key="git4idea.branch.GitSmartOperationDialog" timestamp="1578906919866">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -324,9 +340,13 @@
     <state x="657" y="253" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1579000316292" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/com_BAE_ClimbingTracker$All_in_Application__1_.ic" NAME="All in Application (1) Coverage Results" MODIFIED="1579027034725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/com_BAE_ClimbingTracker$All_in_Application__1_.ic" NAME="All in Application (1) Coverage Results" MODIFIED="1579089089557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/com_BAE_ClimbingTracker$ClimberRepoTest.ic" NAME="ClimberRepoTest Coverage Results" MODIFIED="1579027012458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>persistance.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/com_BAE_ClimbingTracker$com_bae_persistence_repository_in_Application.ic" NAME="com.bae.persistence.repository in Application Coverage Results" MODIFIED="1579101540706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.bae.persistence.repository.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/com_BAE_ClimbingTracker$All_in_Application.ic" NAME="All in Application Coverage Results" MODIFIED="1579101551538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

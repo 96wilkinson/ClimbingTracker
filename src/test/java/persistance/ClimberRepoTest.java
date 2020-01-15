@@ -29,7 +29,7 @@ public class ClimberRepoTest {
 	@Autowired
 	private ClimberRepository climberRepository;
 
-/*	private ClimbingAttemptRepository attemptRepository;*/
+	private ClimbingAttemptRepository attemptRepository;
 
 	private ClimbingAttempts testClimbingAttempt;
 
@@ -39,33 +39,41 @@ public class ClimberRepoTest {
 	private final String TEST_FIRST = "Neeven";
 	private final String TEST_SUR = "Valydon";
 
-	private final Climber TEST_CLIMBER = new Climber(TEST_USER, TEST_FIRST, TEST_SUR, testClimbingAttemptsSet);
+	private final Climber climberToSaveToRepo = new Climber(TEST_USER, TEST_FIRST, TEST_SUR, testClimbingAttemptsSet);
 
 	private Climber testSavedClimber;
+
+
 
 	@Before
 	public void init() {
 		this.climberRepository.deleteAll();
+
 		this.testClimbingAttempt = new ClimbingAttempts(1,18,12,1996,3);
-		/*this.attemptRepository.save(testClimbingAttempt);*/
+		this.attemptRepository.save(testClimbingAttempt);
 		this.testClimbingAttemptsSet.add(testClimbingAttempt);
-		this.testSavedClimber = this.climberRepository.save(this.TEST_CLIMBER);
+
+		this.climberRepository.save(this.climberToSaveToRepo);
+		this.testSavedClimber = new Climber("NivsValy","Neeven","Valydon",testClimbingAttemptsSet);
+
+		this.testSavedClimber.setId(climberToSaveToRepo.getId());
+
 
 	}
 
 	@Test
 	public void testFindByUserName() {
-		assertThat(this.climberRepository.findByUsername(this.TEST_USER)).containsExactly(this.testSavedClimber);
+		assertThat(this.climberRepository.findByUsername(this.climberToSaveToRepo.getUsername())).containsExactly(this.testSavedClimber);
 	}
 
 	@Test
 	public void testFindByFirstName(){
-		assertThat(this.climberRepository.findByFirstname(this.TEST_FIRST)).containsExactly(this.testSavedClimber);
+		assertThat(this.climberRepository.findByFirstname(this.climberToSaveToRepo.getFirstname())).containsExactly(this.testSavedClimber);
 	}
 
 	@Test
 	public void testFindBySurName(){
-		assertThat(this.climberRepository.findBySurname(this.TEST_SUR)).containsExactly(this.testSavedClimber);
+		assertThat(this.climberRepository.findBySurname(this.climberToSaveToRepo.getSurname())).containsExactly(this.testSavedClimber);
 	}
 
 

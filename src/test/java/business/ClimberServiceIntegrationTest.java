@@ -60,7 +60,7 @@ public class ClimberServiceIntegrationTest {
 
 	@Test
 	public void testReadClimber() {
-		assertThat(this.service.getAllClimber()).isEqualTo(Arrays.asList(new Climber[] { this.testClimberWithID }));
+		assertThat(this.service.getAllClimber()).isEqualTo(this.testClimberWithID );
 	}
 
 	@Test

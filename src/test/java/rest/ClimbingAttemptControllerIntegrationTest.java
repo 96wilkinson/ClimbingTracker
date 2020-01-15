@@ -13,7 +13,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -40,21 +39,22 @@ public class ClimbingAttemptControllerIntegrationTest {
 
     private Long id;
 
-    private List<ClimbingAttempts> climbingAttemptList;
+    private Set<ClimbingAttempts> testClimbingAttemptsSet = new HashSet<ClimbingAttempts>();
 
-    private ClimbingAttempts testClimbingAttempt;
+    private ClimbingAttempts testClimbingAttempt = new ClimbingAttempts(18,12,1996,3,5);
 
-    Set<ClimbingAttempts> TEST_Attempt = new HashSet<ClimbingAttempts>();
+    Set<ClimbingAttempts> testClimbingAttemptSet = new HashSet<ClimbingAttempts>();
 
     private ClimbingAttempts testClimbingAttemptsWithID;
 
     @Before
     public void init() {
-        this.climbingAttemptList = new ArrayList<>();
-        this.testClimbingAttempt = new ClimbingAttempts(1,18,12,1996,3);
-        this.TEST_Attempt.add(testClimbingAttempt);
         this.repo.deleteAll();
+
         this.testClimbingAttemptsWithID = this.repo.save(this.testClimbingAttempt);
+
+        this.testClimbingAttemptSet.add(testClimbingAttempt);
+
         this.id = this.testClimbingAttemptsWithID.getId();
     }
     @Test
