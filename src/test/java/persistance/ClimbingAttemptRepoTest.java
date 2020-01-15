@@ -31,9 +31,9 @@ public class ClimbingAttemptRepoTest {
     private final int TIME_SPENT = 5;
 
     private final ClimbingAttempts attemptToSaveToRepo = new ClimbingAttempts(DAY
-            ,MONTH,YEAR,DIFFICULTY,TIME_SPENT);
+            , MONTH, YEAR, DIFFICULTY, TIME_SPENT);
 
-    private ClimbingAttempts testClimbingAttempt = new ClimbingAttempts(18,12,1996,3,5);
+    private ClimbingAttempts testClimbingAttempt = new ClimbingAttempts(18, 12, 1996, 3, 5);
 
     private Set<ClimbingAttempts> testClimbingAttemptsSet = new HashSet<ClimbingAttempts>();
 

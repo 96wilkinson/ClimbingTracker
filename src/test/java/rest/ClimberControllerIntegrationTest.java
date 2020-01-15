@@ -1,3 +1,4 @@
+/*
 package rest;
 
 
@@ -91,3 +92,4 @@ public class ClimberControllerIntegrationTest {
         this.mock.perform(request(HttpMethod.DELETE, "/climberapp/DeleteClimber/" + this.id)).andExpect(status().isOk());
     }
 }
+*/

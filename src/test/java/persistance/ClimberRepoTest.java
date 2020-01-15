@@ -1,3 +1,4 @@
+/*
 package persistance;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -26,56 +27,56 @@ import java.util.*;
 public class ClimberRepoTest {
 
 
-	@Autowired
-	private ClimberRepository climberRepository;
+    @Autowired
+    private ClimberRepository climberRepository;
 
-	private ClimbingAttemptRepository attemptRepository;
+    private ClimbingAttemptRepository attemptRepository;
 
-	private ClimbingAttempts testClimbingAttempt;
+    private ClimbingAttempts testClimbingAttempt = new ClimbingAttempts(1, 18, 12, 1996, 3);
+    ;
 
-	private Set<ClimbingAttempts> testClimbingAttemptsSet = new HashSet<ClimbingAttempts>();
+    private Set<ClimbingAttempts> testClimbingAttemptsSet = new HashSet<ClimbingAttempts>();
 
-	private final String TEST_USER = "NivsValy";
-	private final String TEST_FIRST = "Neeven";
-	private final String TEST_SUR = "Valydon";
+    private final String TEST_USER = "NivsValy";
+    private final String TEST_FIRST = "Neeven";
+    private final String TEST_SUR = "Valydon";
 
-	private final Climber climberToSaveToRepo = new Climber(TEST_USER, TEST_FIRST, TEST_SUR, testClimbingAttemptsSet);
+    private final Climber climberToSaveToRepo = new Climber(TEST_USER, TEST_FIRST, TEST_SUR, testClimbingAttemptsSet);
 
-	private Climber testSavedClimber;
-
-
-
-	@Before
-	public void init() {
-		this.climberRepository.deleteAll();
-
-		this.testClimbingAttempt = new ClimbingAttempts(1,18,12,1996,3);
-		this.attemptRepository.save(testClimbingAttempt);
-		this.testClimbingAttemptsSet.add(testClimbingAttempt);
-
-		this.climberRepository.save(this.climberToSaveToRepo);
-		this.testSavedClimber = new Climber("NivsValy","Neeven","Valydon",testClimbingAttemptsSet);
-
-		this.testSavedClimber.setId(climberToSaveToRepo.getId());
+    private Climber testSavedClimber;
 
 
-	}
+    @Before
+    public void init() {
+        this.climberRepository.deleteAll();
 
-	@Test
-	public void testFindByUserName() {
-		assertThat(this.climberRepository.findByUsername(this.climberToSaveToRepo.getUsername())).containsExactly(this.testSavedClimber);
-	}
+        this.attemptRepository.save(testClimbingAttempt);
+        this.testClimbingAttemptsSet.add(testClimbingAttempt);
 
-	@Test
-	public void testFindByFirstName(){
-		assertThat(this.climberRepository.findByFirstname(this.climberToSaveToRepo.getFirstname())).containsExactly(this.testSavedClimber);
-	}
+        this.climberRepository.save(this.climberToSaveToRepo);
+        this.testSavedClimber = new Climber("NivsValy", "Neeven", "Valydon", testClimbingAttemptsSet);
 
-	@Test
-	public void testFindBySurName(){
-		assertThat(this.climberRepository.findBySurname(this.climberToSaveToRepo.getSurname())).containsExactly(this.testSavedClimber);
-	}
+        this.testSavedClimber.setId(climberToSaveToRepo.getId());
+
+
+    }
+
+    @Test
+    public void testFindByUserName() {
+        assertThat(this.climberRepository.findByUsername(this.climberToSaveToRepo.getUsername())).containsExactly(this.testSavedClimber);
+    }
+
+    @Test
+    public void testFindByFirstName() {
+        assertThat(this.climberRepository.findByFirstname(this.climberToSaveToRepo.getFirstname())).containsExactly(this.testSavedClimber);
+    }
+
+    @Test
+    public void testFindBySurName() {
+        assertThat(this.climberRepository.findBySurname(this.climberToSaveToRepo.getSurname())).containsExactly(this.testSavedClimber);
+    }
 
 
 }
 
+*/

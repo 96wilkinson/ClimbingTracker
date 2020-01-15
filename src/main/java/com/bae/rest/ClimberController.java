@@ -19,35 +19,37 @@ import com.bae.persistence.domain.Climber;
 @RequestMapping("/climberapp")
 public class ClimberController {
 
-	private ClimberService service;
+    private ClimberService service;
 
-	@Autowired
-	public ClimberController(ClimberService climberService) {
-		this.service = climberService;
-	}
+    @Autowired
+    public ClimberController(ClimberService climberService) {
+        this.service = climberService;
+    }
 
-	@GetMapping("/getAll")
-	public List<Climber> getAllClimber() {
-		return service.getAllClimber();
-	}
+    @GetMapping("/getAll")
+    public List<Climber> getAllClimber() {
+        return service.getAllClimber();
+    }
 
-	@GetMapping("/get/{id}")
-	public Climber getClimber(@PathVariable Long id) { return this.service.findClimberById(id); }
+    @GetMapping("/get/{id}")
+    public Climber getClimber(@PathVariable Long id) {
+        return this.service.findClimberById(id);
+    }
 
-	@PostMapping("/createClimber")
-	public Climber addNewClimber(@RequestBody Climber climber) {
+    @PostMapping("/createClimber")
+    public Climber addNewClimber(@RequestBody Climber climber) {
 
-		return service.addNewClimber(climber);
-	}
+        return service.addNewClimber(climber);
+    }
 
-	@PutMapping("/updateClimber/{id}")
-	public Climber updateClimber(@PathVariable(value = "id") Long id,@RequestBody Climber climber) {
-		return service.updateClimber(climber, id);
-	}
+    @PutMapping("/updateClimber/{id}")
+    public Climber updateClimber(@PathVariable(value = "id") Long id, @RequestBody Climber climber) {
+        return service.updateClimber(climber, id);
+    }
 
-	@DeleteMapping("/DeleteClimber/{id}")
-	public void deleteClimber(@PathVariable(value = "id") Long id) {
-		this.service.deleteClimber(id);
-	}
+    @DeleteMapping("/DeleteClimber/{id}")
+    public void deleteClimber(@PathVariable(value = "id") Long id) {
+        this.service.deleteClimber(id);
+    }
 
 }

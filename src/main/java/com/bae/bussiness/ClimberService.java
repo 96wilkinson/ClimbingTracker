@@ -13,39 +13,39 @@ import exceptions.ClimberNotFoundException;
 @Service
 public class ClimberService {
 
-	private ClimberRepository climberRepo;
+    private ClimberRepository climberRepo;
 
-	@Autowired
-	public ClimberService(ClimberRepository climberRepo) {
-		this.climberRepo = climberRepo;
-	}
+    @Autowired
+    public ClimberService(ClimberRepository climberRepo) {
+        this.climberRepo = climberRepo;
+    }
 
-	public List<Climber> getAllClimber() {
-		return climberRepo.findAll();
-	}
+    public List<Climber> getAllClimber() {
+        return climberRepo.findAll();
+    }
 
-	public Climber addNewClimber(Climber climbers) {
-		return climberRepo.save(climbers);
-	}
+    public Climber addNewClimber(Climber climbers) {
+        return climberRepo.save(climbers);
+    }
 
-	public Climber updateClimber(Climber climber, Long id) {
-		Climber toUpdate = findClimberById(id);
-		toUpdate.setUsername(climber.getUsername());
-		toUpdate.setFirstname(climber.getFirstname());
-		toUpdate.setSurname(climber.getSurname());
-		return this.climberRepo.save(toUpdate);
-	}
+    public Climber updateClimber(Climber climber, Long id) {
+        Climber toUpdate = findClimberById(id);
+        toUpdate.setUsername(climber.getUsername());
+        toUpdate.setFirstname(climber.getFirstname());
+        toUpdate.setSurname(climber.getSurname());
+        return this.climberRepo.save(toUpdate);
+    }
 
-	public boolean deleteClimber(Long id) {
-		if (!this.climberRepo.existsById(id)) {
-			throw new ClimberNotFoundException();
-		}
-		this.climberRepo.deleteById(id);
-		return this.climberRepo.existsById(id);
-	}
+    public boolean deleteClimber(Long id) {
+        if (!this.climberRepo.existsById(id)) {
+            throw new ClimberNotFoundException();
+        }
+        this.climberRepo.deleteById(id);
+        return this.climberRepo.existsById(id);
+    }
 
-	public Climber findClimberById(Long id) {
-		return this.climberRepo.findById(id).orElseThrow(() -> new ClimberNotFoundException());
-	}
+    public Climber findClimberById(Long id) {
+        return this.climberRepo.findById(id).orElseThrow(() -> new ClimberNotFoundException());
+    }
 
 }
