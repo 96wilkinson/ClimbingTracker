@@ -1,4 +1,3 @@
-/*
 package persistance;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -41,6 +40,7 @@ public class ClimberRepoTest {
 
     private Set<ClimbingAttempts> testClimbingAttemptsSet = new HashSet<ClimbingAttempts>();
 
+    @Autowired
     private ClimbingAttemptRepository attemptRepository;
 
     private final String TEST_USER = "NivsValy";
@@ -85,4 +85,3 @@ public class ClimberRepoTest {
 
 }
 
-*/

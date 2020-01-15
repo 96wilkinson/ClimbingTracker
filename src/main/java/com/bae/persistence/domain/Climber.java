@@ -1,5 +1,6 @@
 package com.bae.persistence.domain;
 
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 import javax.persistence.*;
@@ -22,7 +23,7 @@ public class Climber {
 
     @OneToMany(targetEntity = ClimbingAttempts.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "climber_id")
-    private Set<ClimbingAttempts> climbingAttempts;
+    private Set<ClimbingAttempts> climbingAttempts = new HashSet<>();
 
     public Climber(String username, String firstname, String surname, Set<ClimbingAttempts> getClimbingAttempts) {
         super();

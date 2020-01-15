@@ -1,4 +1,3 @@
-/*
 package rest;
 
 
@@ -15,6 +14,7 @@ import com.bae.Application;
 import com.bae.persistence.domain.Climber;
 import com.bae.persistence.domain.ClimbingAttempts;
 import com.bae.persistence.repository.ClimberRepository;
+import com.bae.persistence.repository.ClimbingAttemptRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
 import org.junit.Test;
@@ -35,7 +35,10 @@ public class ClimberControllerIntegrationTest {
     private MockMvc mock;
 
     @Autowired
-    private ClimberRepository repo;
+    private ClimberRepository testClimberRepository;
+
+    @Autowired
+    private ClimbingAttemptRepository testAttemptRepository;
 
     private ObjectMapper mapper = new ObjectMapper();
 
@@ -45,14 +48,25 @@ public class ClimberControllerIntegrationTest {
 
     private Climber testClimberWithID;
 
-    Set<ClimbingAttempts> TEST_Attempt = new HashSet<ClimbingAttempts>();
+    private final int DAY = 18;
+    private final int MONTH = 12;
+    private final int YEAR = 1996;
+    private final int DIFFICULTY = 3;
+    private final int TIME_SPENT = 5;
+
+    private final ClimbingAttempts attemptToSaveToRepo = new ClimbingAttempts(DAY
+            , MONTH, YEAR, DIFFICULTY, TIME_SPENT);
+
+    private Set<ClimbingAttempts> testClimbingAttemptsSet = new HashSet<>();
 
     @Before
     public void init() {
-        this.repo.deleteAll();
+        this.testClimberRepository.deleteAll();
+        this.testClimbingAttemptsSet.add(attemptToSaveToRepo);
+        this.testAttemptRepository.saveAndFlush(this.attemptToSaveToRepo);
 
-        this.testClimber = new Climber("96wilkinson", "Tony", "Wilkinson",TEST_Attempt);
-        this.testClimberWithID = this.repo.save(this.testClimber);
+        this.testClimber = new Climber("96wilkinson", "Tony", "Wilkinson", testClimbingAttemptsSet);
+        this.testClimberWithID = this.testClimberRepository.save(this.testClimber);
         this.id = this.testClimberWithID.getId();
     }
     @Test
@@ -75,8 +89,8 @@ public class ClimberControllerIntegrationTest {
     }
     @Test
     public void testUpdateClimber() throws Exception {
-        Climber newClimber = new Climber("Bear", "Bear", "Grylls",TEST_Attempt);
-        Climber updatedClimber = new Climber(newClimber.getUsername(), newClimber.getFirstname(), newClimber.getSurname(),newClimber.getClimbingAttempts());
+        Climber newClimber = new Climber("Bear", "Bear", "Grylls", testClimbingAttemptsSet);
+        Climber updatedClimber = new Climber(newClimber.getUsername(), newClimber.getFirstname(), newClimber.getSurname(), newClimber.getClimbingAttempts());
         updatedClimber.setId(this.id);
 
         String result = this.mock
@@ -92,4 +106,3 @@ public class ClimberControllerIntegrationTest {
         this.mock.perform(request(HttpMethod.DELETE, "/climberapp/DeleteClimber/" + this.id)).andExpect(status().isOk());
     }
 }
-*/
