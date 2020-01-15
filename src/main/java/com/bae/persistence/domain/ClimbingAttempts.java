@@ -78,18 +78,6 @@ public class ClimbingAttempts {
 
 
 	@Override
-	public String toString() {
-		return "ClimbingAttempts{" +
-				"id=" + id +
-				", day=" + day +
-				", month=" + month +
-				", year=" + year +
-				", difficulty=" + difficulty +
-				", timeSpent=" + timeSpent +
-				'}';
-	}
-
-	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;

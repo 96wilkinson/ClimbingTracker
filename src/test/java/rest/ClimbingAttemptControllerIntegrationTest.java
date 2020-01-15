@@ -1,4 +1,3 @@
-/*
 package rest;
 
 
@@ -34,27 +33,34 @@ public class ClimbingAttemptControllerIntegrationTest {
     private MockMvc mock;
 
     @Autowired
-    private ClimbingAttemptRepository repo;
+    private ClimbingAttemptRepository testAttemptRepository;
 
     private ObjectMapper mapper = new ObjectMapper();
 
     private Long id;
 
-    private Set<ClimbingAttempts> testClimbingAttemptsSet = new HashSet<ClimbingAttempts>();
-
     private ClimbingAttempts testClimbingAttempt = new ClimbingAttempts(18,12,1996,3,5);
-
-    Set<ClimbingAttempts> testClimbingAttemptSet = new HashSet<ClimbingAttempts>();
 
     private ClimbingAttempts testClimbingAttemptsWithID;
 
+    private final int DAY = 18;
+    private final int MONTH = 12;
+    private final int YEAR = 1996;
+    private final int DIFFICULTY = 3;
+    private final int TIME_SPENT = 5;
+
+    private final ClimbingAttempts attemptToSaveToRepo = new ClimbingAttempts(DAY
+            , MONTH, YEAR, DIFFICULTY, TIME_SPENT);
+
+    private Set<ClimbingAttempts> testClimbingAttemptsSet = new HashSet<>();
+
     @Before
     public void init() {
-        this.repo.deleteAll();
+        this.testAttemptRepository.deleteAll();
 
-        this.testClimbingAttemptsWithID = this.repo.save(this.testClimbingAttempt);
+        this.testClimbingAttemptsSet.add(attemptToSaveToRepo);
 
-        this.testClimbingAttemptSet.add(testClimbingAttempt);
+        this.testClimbingAttemptsWithID = this.testAttemptRepository.saveAndFlush(this.attemptToSaveToRepo);
 
         this.id = this.testClimbingAttemptsWithID.getId();
     }
@@ -96,4 +102,3 @@ public class ClimbingAttemptControllerIntegrationTest {
         this.mock.perform(request(HttpMethod.DELETE, "/climberapp/DeleteClimbingAttempt/" + this.id)).andExpect(status().isOk());
     }
 }
-*/

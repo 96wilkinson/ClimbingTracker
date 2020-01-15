@@ -21,7 +21,7 @@ public class Climber {
     @Column(name = "surname")
     private String surname;
 
-    @OneToMany(targetEntity = ClimbingAttempts.class, cascade = CascadeType.ALL)
+    @OneToMany(targetEntity = ClimbingAttempts.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "climber_id")
     private Set<ClimbingAttempts> climbingAttempts = new HashSet<>();
 
@@ -99,8 +99,4 @@ public class Climber {
                 Objects.equals(climbingAttempts, climber.climbingAttempts);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, username, firstname, surname, climbingAttempts);
-    }
 }

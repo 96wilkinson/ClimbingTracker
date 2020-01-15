@@ -1,4 +1,3 @@
-/*
 package business;
 
 import com.bae.bussiness.ClimbingAttemptService;
@@ -85,4 +84,3 @@ public class ClimbingAttemptServiceUnitTests {
 		verify(repo, times(1)).findAll();
 	}
 }
-*/
