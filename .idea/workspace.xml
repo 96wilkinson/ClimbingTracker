@@ -4,19 +4,7 @@
     <list default="true" id="01c2b075-2d4b-4731-aa83-61930d0a8505" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bae/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bae/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bae/bussiness/ClimberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bae/bussiness/ClimberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bae/bussiness/ClimbingAttemptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bae/bussiness/ClimbingAttemptService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bae/persistence/domain/Climber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bae/persistence/domain/Climber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bae/persistence/repository/ClimberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bae/persistence/repository/ClimberRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bae/persistence/repository/ClimbingAttemptRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bae/persistence/repository/ClimbingAttemptRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bae/rest/ClimberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bae/rest/ClimberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bae/rest/ClimbingAttemptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bae/rest/ClimbingAttemptController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/business/ClimberServiceIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/business/ClimberServiceIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/business/ClimbingAttemptServiceUnitTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/business/ClimbingAttemptServiceUnitTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/persistance/ClimberRepoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/persistance/ClimberRepoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/persistance/ClimbingAttemptRepoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/persistance/ClimbingAttemptRepoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rest/ClimberControllerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rest/ClimberControllerIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rest/ClimbingAttemptControllerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rest/ClimbingAttemptControllerIntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,9 +120,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in Application" />
+        <item itemvalue="JUnit.ClimbingAttemptControllerIntegrationTest.testCreateClimbingAttempt" />
         <item itemvalue="JUnit.ClimberRepoTest" />
         <item itemvalue="JUnit.ClimberRepoTest.testFindByUserName" />
-        <item itemvalue="JUnit.ClimbingAttemptControllerIntegrationTest.testCreateClimbingAttempt" />
         <item itemvalue="JUnit.ClimbingAttemptControllerIntegrationTest" />
       </list>
     </recent_temporary>
@@ -171,7 +159,7 @@
       <workItem from="1579084125425" duration="6000" />
       <workItem from="1579084165797" duration="17000" />
       <workItem from="1579088038239" duration="9039000" />
-      <workItem from="1579102406651" duration="1671000" />
+      <workItem from="1579102406651" duration="3224000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1578926163052</created>
@@ -222,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579102072999</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="commenting tests out">
+      <created>1579104096293</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1579104096293</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +242,8 @@
     <MESSAGE value="For Tadas" />
     <MESSAGE value="Tests 30/44 passed so far" />
     <MESSAGE value="ClimberRepoTest is now working" />
-    <option name="LAST_COMMIT_MESSAGE" value="ClimberRepoTest is now working" />
+    <MESSAGE value="commenting tests out" />
+    <option name="LAST_COMMIT_MESSAGE" value="commenting tests out" />
   </component>
   <component name="WindowStateProjectService">
     <state x="588" y="214" width="800" height="677" key="#Assign_Data_Sources" timestamp="1579016961088">
@@ -270,46 +266,46 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="513" y="27" width="951" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579019607731" />
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1579102072229">
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1579104095778">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579102072229" />
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579104095778" />
     <state x="242" y="116" width="1482" height="872" key="DiffContextDialog" timestamp="1579015701381">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="242" y="116" width="1482" height="872" key="DiffContextDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579015701381" />
-    <state width="1807" height="392" key="GridCell.Tab.0.bottom" timestamp="1579104030082">
+    <state width="1807" height="392" key="GridCell.Tab.0.bottom" timestamp="1579105621276">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="392" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579104030082" />
-    <state width="1807" height="392" key="GridCell.Tab.0.center" timestamp="1579104030080">
+    <state width="1807" height="392" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579105621276" />
+    <state width="1807" height="392" key="GridCell.Tab.0.center" timestamp="1579105621273">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="392" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579104030080" />
-    <state width="1807" height="392" key="GridCell.Tab.0.left" timestamp="1579104030080">
+    <state width="1807" height="392" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579105621273" />
+    <state width="1807" height="392" key="GridCell.Tab.0.left" timestamp="1579105621273">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="392" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579104030080" />
-    <state width="1807" height="392" key="GridCell.Tab.0.right" timestamp="1579104030080">
+    <state width="1807" height="392" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579105621273" />
+    <state width="1807" height="392" key="GridCell.Tab.0.right" timestamp="1579105621273">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="392" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579104030080" />
-    <state width="1807" height="278" key="GridCell.Tab.1.bottom" timestamp="1579104029919">
+    <state width="1807" height="392" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579105621273" />
+    <state width="1807" height="392" key="GridCell.Tab.1.bottom" timestamp="1579105621097">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579104029919" />
-    <state width="1807" height="278" key="GridCell.Tab.1.center" timestamp="1579104029918">
+    <state width="1807" height="392" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1579105621097" />
+    <state width="1807" height="392" key="GridCell.Tab.1.center" timestamp="1579105621097">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579104029918" />
-    <state width="1807" height="278" key="GridCell.Tab.1.left" timestamp="1579104029916">
+    <state width="1807" height="392" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1579105621097" />
+    <state width="1807" height="392" key="GridCell.Tab.1.left" timestamp="1579105621096">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579104029916" />
-    <state width="1807" height="278" key="GridCell.Tab.1.right" timestamp="1579104029919">
+    <state width="1807" height="392" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1579105621096" />
+    <state width="1807" height="392" key="GridCell.Tab.1.right" timestamp="1579105621097">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state width="1807" height="278" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579104029919" />
+    <state width="1807" height="392" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579105621097" />
     <state width="1807" height="344" key="GridCell.Tab.2.bottom" timestamp="1579015533446">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -334,10 +330,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="780" y="258" width="416" height="589" key="VCS.ChangeListViewerDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579096744302" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579102075852">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1579104105781">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579102075852" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579104105781" />
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1579102406979">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

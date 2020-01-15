@@ -30,12 +30,18 @@ public class ClimberRepoTest {
     @Autowired
     private ClimberRepository climberRepository;
 
-    private ClimbingAttemptRepository attemptRepository;
+    private final int DAY = 18;
+    private final int MONTH = 12;
+    private final int YEAR = 1996;
+    private final int DIFFICULTY = 3;
+    private final int TIME_SPENT = 5;
 
-    private ClimbingAttempts testClimbingAttempt = new ClimbingAttempts(1, 18, 12, 1996, 3);
-    ;
+    private final ClimbingAttempts testClimbingAttempt = new ClimbingAttempts(DAY
+            , MONTH, YEAR, DIFFICULTY, TIME_SPENT);
 
     private Set<ClimbingAttempts> testClimbingAttemptsSet = new HashSet<ClimbingAttempts>();
+
+    private ClimbingAttemptRepository attemptRepository;
 
     private final String TEST_USER = "NivsValy";
     private final String TEST_FIRST = "Neeven";
@@ -43,7 +49,7 @@ public class ClimberRepoTest {
 
     private final Climber climberToSaveToRepo = new Climber(TEST_USER, TEST_FIRST, TEST_SUR, testClimbingAttemptsSet);
 
-    private Climber testSavedClimber;
+    private final Climber climberToTestAgainst = new Climber("NivsValy", "Neeven", "Valydon", testClimbingAttemptsSet);
 
 
     @Before
@@ -51,29 +57,29 @@ public class ClimberRepoTest {
         this.climberRepository.deleteAll();
 
         this.attemptRepository.save(testClimbingAttempt);
+
         this.testClimbingAttemptsSet.add(testClimbingAttempt);
 
         this.climberRepository.save(this.climberToSaveToRepo);
-        this.testSavedClimber = new Climber("NivsValy", "Neeven", "Valydon", testClimbingAttemptsSet);
 
-        this.testSavedClimber.setId(climberToSaveToRepo.getId());
+        this.climberToTestAgainst.setId(climberToSaveToRepo.getId());
 
 
     }
 
     @Test
     public void testFindByUserName() {
-        assertThat(this.climberRepository.findByUsername(this.climberToSaveToRepo.getUsername())).containsExactly(this.testSavedClimber);
+        assertThat(this.climberRepository.findByUsername(this.climberToSaveToRepo.getUsername())).containsExactly(this.climberToTestAgainst);
     }
 
     @Test
     public void testFindByFirstName() {
-        assertThat(this.climberRepository.findByFirstname(this.climberToSaveToRepo.getFirstname())).containsExactly(this.testSavedClimber);
+        assertThat(this.climberRepository.findByFirstname(this.climberToSaveToRepo.getFirstname())).containsExactly(this.climberToTestAgainst);
     }
 
     @Test
     public void testFindBySurName() {
-        assertThat(this.climberRepository.findBySurname(this.climberToSaveToRepo.getSurname())).containsExactly(this.testSavedClimber);
+        assertThat(this.climberRepository.findBySurname(this.climberToSaveToRepo.getSurname())).containsExactly(this.climberToTestAgainst);
     }
 
 
