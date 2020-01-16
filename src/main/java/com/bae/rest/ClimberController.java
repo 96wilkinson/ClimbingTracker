@@ -16,7 +16,7 @@ import com.bae.bussiness.ClimberService;
 import com.bae.persistence.domain.Climber;
 
 @RestController
-@RequestMapping("/climberapp")
+@RequestMapping("/ClimbingTracker")
 public class ClimberController {
 
     private ClimberService service;
