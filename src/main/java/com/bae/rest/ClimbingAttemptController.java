@@ -31,13 +31,13 @@ public class ClimbingAttemptController {
         return this.Service.findClimbingAttemptsById(id);
     }
 
-    @PostMapping("/createClimbingAttempt/{climberId}")
+    @PostMapping("/createClimbingAttempt/{id}")
     public ClimbingAttempts addNewClimbingAttempts(@RequestBody ClimbingAttempts addNewClimbingAttempts,
-                                                   @PathVariable("climberId") Long climberId) {
-        return Service.addNewClimbingAttempts(addNewClimbingAttempts, climberId);
+                                                   @PathVariable("id") Long id) {
+        return Service.addNewClimbingAttempts(addNewClimbingAttempts, id);
     }
 
-    @PutMapping("/updateClimbingAttempt")
+    @PutMapping("/updateClimbingAttempt/{id}")
     public ClimbingAttempts updateClimber(@PathVariable(value = "id") Long id, @RequestBody ClimbingAttempts climbingAttempts) {
         return Service.updateClimbingAttempt(climbingAttempts, id);
     }

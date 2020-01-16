@@ -39,7 +39,7 @@ public class ClimbingAttemptControllerIntegrationTest {
 
     private Long id;
 
-    private ClimbingAttempts testClimbingAttempt = new ClimbingAttempts(18,12,1996,3,5);
+    private ClimbingAttempts testClimbingAttempt = new ClimbingAttempts(18, 12, 1996, 3, 5);
 
     private ClimbingAttempts testClimbingAttemptsWithID;
 
@@ -64,14 +64,16 @@ public class ClimbingAttemptControllerIntegrationTest {
 
         this.id = this.testClimbingAttemptsWithID.getId();
     }
+
     @Test
     public void testCreateClimbingAttempt() throws Exception {
         String result = this.mock
-                .perform(request(HttpMethod.POST, "/climberapp/createClimbingAttempt").contentType(MediaType.APPLICATION_JSON)
-                        .content(this.mapper.writeValueAsString(testClimbingAttempt)).accept(MediaType.APPLICATION_JSON))
+                .perform(request(HttpMethod.POST, "/climberapp/createClimbingAttempt/" + this.id).contentType(MediaType.APPLICATION_JSON)
+                        .content(this.mapper.writeValueAsString(attemptToSaveToRepo)).accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
         assertEquals(this.mapper.writeValueAsString(testClimbingAttemptsWithID), result);
     }
+
     @Test
     public void testGetAllClimbingAttempts() throws Exception {
         List<ClimbingAttempts> climberList = new ArrayList<>();
@@ -82,11 +84,12 @@ public class ClimbingAttemptControllerIntegrationTest {
 
         assertEquals(this.mapper.writeValueAsString(climberList), content);
     }
+
     @Test
     public void testUpdateClimbingAttempt() throws Exception {
-        ClimbingAttempts newClimbingAttempts = new ClimbingAttempts(22,11,1997,3,5);
-        ClimbingAttempts updatedClimbingAttempts = new ClimbingAttempts(newClimbingAttempts.getDay(),newClimbingAttempts.getMonth()
-                ,newClimbingAttempts.getYear(),newClimbingAttempts.getDifficulty(),newClimbingAttempts.getTimeSpent());
+        ClimbingAttempts newClimbingAttempts = new ClimbingAttempts(22, 11, 1997, 3, 5);
+        ClimbingAttempts updatedClimbingAttempts = new ClimbingAttempts(newClimbingAttempts.getDay(), newClimbingAttempts.getMonth()
+                , newClimbingAttempts.getYear(), newClimbingAttempts.getDifficulty(), newClimbingAttempts.getTimeSpent());
         updatedClimbingAttempts.setId(this.id);
 
         String result = this.mock
@@ -97,6 +100,7 @@ public class ClimbingAttemptControllerIntegrationTest {
         assertEquals(this.mapper.writeValueAsString(updatedClimbingAttempts), result);
 
     }
+
     @Test
     public void testDeleteClimbingAttempt() throws Exception {
         this.mock.perform(request(HttpMethod.DELETE, "/climberapp/DeleteClimbingAttempt/" + this.id)).andExpect(status().isOk());
