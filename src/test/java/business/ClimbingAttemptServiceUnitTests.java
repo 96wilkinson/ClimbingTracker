@@ -46,6 +46,7 @@ public class ClimbingAttemptServiceUnitTests {
 		this.testClimbingAttemptWithID = new ClimbingAttempts(testClimbingAttempt.getDay(),testClimbingAttempt.getMonth()
 				,testClimbingAttempt.getYear(),testClimbingAttempt.getDifficulty(),testClimbingAttempt.getTimeSpent());
 		this.testClimbingAttemptWithID.setId(id);
+		this.climbingAttemptList.add(testClimbingAttempt);
 		TEST_Attempt.add(testClimbingAttemptWithID);
 	}
 
