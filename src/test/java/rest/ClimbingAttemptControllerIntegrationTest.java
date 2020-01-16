@@ -68,7 +68,7 @@ public class ClimbingAttemptControllerIntegrationTest {
     @Test
     public void testCreateClimbingAttempt() throws Exception {
         String result = this.mock
-                .perform(request(HttpMethod.POST, "/climberapp/createClimbingAttempt/" + this.id).contentType(MediaType.APPLICATION_JSON)
+                .perform(request(HttpMethod.POST, "/ClimbingTracker/createClimbingAttempt/" + this.id).contentType(MediaType.APPLICATION_JSON)
                         .content(this.mapper.writeValueAsString(attemptToSaveToRepo)).accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
         assertEquals(this.mapper.writeValueAsString(testClimbingAttemptsWithID), result);
@@ -79,7 +79,7 @@ public class ClimbingAttemptControllerIntegrationTest {
         List<ClimbingAttempts> climberList = new ArrayList<>();
         climberList.add(this.testClimbingAttemptsWithID);
 
-        String content = this.mock.perform(request(HttpMethod.GET, "/climberapp/getAllClimbingAttempts").accept(MediaType.APPLICATION_JSON))
+        String content = this.mock.perform(request(HttpMethod.GET, "/ClimbingTracker/getAllClimbingAttempts").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
 
         assertEquals(this.mapper.writeValueAsString(climberList), content);
@@ -93,7 +93,7 @@ public class ClimbingAttemptControllerIntegrationTest {
         updatedClimbingAttempts.setId(this.id);
 
         String result = this.mock
-                .perform(request(HttpMethod.PUT, "/climberapp/updateClimbingAttempt/" + this.id).accept(MediaType.APPLICATION_JSON)
+                .perform(request(HttpMethod.PUT, "/ClimbingTracker/updateClimbingAttempt/" + this.id).accept(MediaType.APPLICATION_JSON)
                         .contentType(MediaType.APPLICATION_JSON).content(this.mapper.writeValueAsString(newClimbingAttempts)))
                 .andExpect(status().isOk()).andReturn().getResponse().getContentAsString();
 
@@ -103,6 +103,6 @@ public class ClimbingAttemptControllerIntegrationTest {
 
     @Test
     public void testDeleteClimbingAttempt() throws Exception {
-        this.mock.perform(request(HttpMethod.DELETE, "/climberapp/DeleteClimbingAttempt/" + this.id)).andExpect(status().isOk());
+        this.mock.perform(request(HttpMethod.DELETE, "/ClimbingTracker/DeleteClimbingAttempt/" + this.id)).andExpect(status().isOk());
     }
 }
