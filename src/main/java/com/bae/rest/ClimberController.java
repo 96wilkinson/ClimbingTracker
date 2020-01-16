@@ -28,6 +28,7 @@ public class ClimberController {
 
     @GetMapping("/getAll")
     public List<Climber> getAllClimber() {
+
         return service.getAllClimber();
     }
 

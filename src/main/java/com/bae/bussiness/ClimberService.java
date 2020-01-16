@@ -21,6 +21,7 @@ public class ClimberService {
     }
 
     public List<Climber> getAllClimber() {
+
         return climberRepo.findAll();
     }
 

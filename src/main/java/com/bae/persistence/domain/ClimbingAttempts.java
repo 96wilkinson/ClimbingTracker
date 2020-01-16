@@ -5,6 +5,7 @@ import java.util.Objects;
 
 
 @Entity
+@Table(name = "climb_attempts")
 public class ClimbingAttempts {
 
 	@Id
