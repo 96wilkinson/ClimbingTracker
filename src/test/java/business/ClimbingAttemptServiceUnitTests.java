@@ -34,7 +34,7 @@ public class ClimbingAttemptServiceUnitTests {
 
 	private final long id = 1L;
 
-	Set<ClimbingAttempts> TEST_Attempt = new HashSet<ClimbingAttempts>();
+	Set<ClimbingAttempts> TEST_Attempt = new HashSet<>();
 
 	Climber testClimber = new Climber("96wilkinson","Anthony","Wilkinson",TEST_Attempt);
 
@@ -42,9 +42,11 @@ public class ClimbingAttemptServiceUnitTests {
 	public void init() {
 		this.climbingAttemptList = new ArrayList<>();
 		this.testClimbingAttempt = new ClimbingAttempts(1,18,12,1996,3);
+
 		this.testClimbingAttemptWithID = new ClimbingAttempts(testClimbingAttempt.getDay(),testClimbingAttempt.getMonth()
 				,testClimbingAttempt.getYear(),testClimbingAttempt.getDifficulty(),testClimbingAttempt.getTimeSpent());
 		this.testClimbingAttemptWithID.setId(id);
+		TEST_Attempt.add(testClimbingAttemptWithID);
 	}
 
 	@Test
@@ -79,7 +81,7 @@ public class ClimbingAttemptServiceUnitTests {
 
 		when(repo.findAll()).thenReturn(this.climbingAttemptList);
 
-		assertFalse("Controller has found no Climbers", this.service.getAllClimbingAttempts().isEmpty());
+		assertFalse("Controller has found no Climbing Attempts", this.service.getAllClimbingAttempts().isEmpty());
 
 		verify(repo, times(1)).findAll();
 	}
