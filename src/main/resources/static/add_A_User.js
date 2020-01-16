@@ -1,5 +1,5 @@
 const Add_User_form = document.getElementById("Input_User");
-let BASE_URL = 'http://localhost:8080/demo/climberapp/';
+let BASE_URL = 'http://3.10.92.183:8181/climberapp/';
 
 Add_User_form.onsubmit = function(event) {
     event.preventDefault();

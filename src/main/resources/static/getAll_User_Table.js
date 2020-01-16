@@ -1,4 +1,4 @@
-axios.get('http://localhost:8080/demo/climberapp/getAll').then (({data: myClimbers}) =>{
+axios.get('http://3.10.92.183:8181/climberapp/getAll').then (({data: myClimbers}) =>{
     //
     let numOfclimbers = myClimbers.length;
     //create a table if there exists more than one climber

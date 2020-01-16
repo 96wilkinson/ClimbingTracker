@@ -1,5 +1,5 @@
 const Add_Attempt_form = document.getElementById("Input_Attempt");
-let BASE_URL = 'http://localhost:8080/demo/climberapp/';
+let BASE_URL = 'http://3.10.92.183:8181/climberapp/';
 
 
 Add_Attempt_form.onsubmit = function(event) {
