@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e25caf73-e426-49f9-a9be-2cb211ad89ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/com_BAE_ClimbingTracker_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/com_BAE_ClimbingTracker_war.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/com_BAE_ClimbingTracker_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/com_BAE_ClimbingTracker_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com.BAE.ClimbingTracker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/com.BAE.ClimbingTracker.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/ClimbingAttemptTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/ClimbingAttemptTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Delete_Attempt.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/Delete_Attempt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Delete_User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/Delete_User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Edit_Attempt.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/Edit_Attempt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Edit_User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/Edit_User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/add_A_Climbing_Attempt.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/add_A_Climbing_Attempt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/add_A_User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/add_A_User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/getAll_User_Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/getAll_User_Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/get_A_User.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +29,14 @@
     <configuration />
   </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="working on frontend">
+      <created>1579191741145</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579191741146</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -57,5 +49,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="working on frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on frontend" />
   </component>
 </project>

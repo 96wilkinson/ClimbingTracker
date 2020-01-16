@@ -42,7 +42,7 @@ axios.get('/ClimbingTracker/ClimbingTracker/getAllClimbingAttempts').then (({dat
                     var Coulumn_Header = "Time Spent"
                     Coulumn_Header.id=Coulumn_Header;
                     break;
-                case "climbAttemptId":
+                case "climber_id":
                     var Coulumn_Header = "Climbing Attempt ID"
                     Coulumn_Header.id=Coulumn_Header;
                     break; 
