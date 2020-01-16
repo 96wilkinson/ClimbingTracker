@@ -1,5 +1,5 @@
 
-let Edit_URL = 'http://3.10.92.183:8181/climberapp/updateClimber/';
+let Edit_URL = '/ClimbingTracker/ClimbingTracker/climberapp/updateClimber/';
 function edit_row(no)
 {
     document.getElementById("Edit" + no).className="NotInUse";

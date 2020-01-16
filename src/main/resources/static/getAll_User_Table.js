@@ -37,8 +37,12 @@ axios.get('/ClimbingTracker/ClimbingTracker/getAll').then (({data: myClimbers}) 
                   break;
                 case "id":
                   var Coulumn_header = "Climber_ID";
-                    Coulumn_header.id = Coulumn_header
+                    Coulumn_header.id = Coulumn_header;
                   break;
+                case "climbingAttempts":
+                    var Coulumn_header = "Climbing_Attempts";
+                        Coulumn_header.id = Coulumn_header;
+                    break;
                 default:
                   var Coulumn_header = "Manage User";
                   break;
