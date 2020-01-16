@@ -1,7 +1,7 @@
 INSERT INTO Climber (username,firstname,surname,id) VALUES
-    ('Scrappy','John', 'Gordon'),
-    ('96wilkinson','Anthony','Wilkinson'),
-    ('jh447','Jordan','Harry');
+    ('Scrappy','John', 'Gordon',1),
+    ('96wilkinson','Anthony','Wilkinson',2),
+    ('jh447','Jordan','Harry',3);
 
 
 INSERT INTO Climbing_Attempts (day,month,year,difficulty,time_spent,climber_id) VALUES
