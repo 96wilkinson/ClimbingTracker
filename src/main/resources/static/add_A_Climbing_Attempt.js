@@ -1,5 +1,5 @@
 const Add_Attempt_form = document.getElementById("Input_Attempt");
-let BASE_URL = 'http://3.10.92.183:8080/ClimbingTracker/ClimbingTracker/';
+let BASE_URL = '/ClimbingTracker/ClimbingTracker/ClimbingTracker/';
 
 
 Add_Attempt_form.onsubmit = function(event) {

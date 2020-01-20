@@ -1,4 +1,4 @@
-axios.get('http://3.10.92.183:8080/ClimbingTracker/ClimbingTracker/getAllClimbingAttempts').then (({data: myClimbingAttempts}) =>{
+axios.get('/ClimbingTracker/ClimbingTracker/getAllClimbingAttempts').then (({data: myClimbingAttempts}) =>{
     //
     var numOfclimbingAttempts = myClimbingAttempts.length;
     //create a table if there exists more than one climber

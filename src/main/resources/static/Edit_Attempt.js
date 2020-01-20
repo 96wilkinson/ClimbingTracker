@@ -1,5 +1,5 @@
 
-let Edit_URL = 'http://3.10.92.183:8080/ClimbingTracker/ClimbingTracker/updateClimbingAttempt/';
+let Edit_URL = '/ClimbingTracker/ClimbingTracker/updateClimbingAttempt/';
 function edit_row(no)
 {
 

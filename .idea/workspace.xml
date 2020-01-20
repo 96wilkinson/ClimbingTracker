@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f0df774-80f6-45d3-8661-c6facc3d623f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/business/ClimberServiceIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/business/ClimberServiceIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/business/ClimbingAttemptServiceIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/business/ClimbingAttemptServiceIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/persistance/ClimberRepoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/persistance/ClimberRepoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rest/ClimberControllerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rest/ClimberControllerIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rest/ClimbingAttemptControllerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rest/ClimbingAttemptControllerIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ClimbingAttemptTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/ClimbingAttemptTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Delete_Attempt.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/Delete_Attempt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Delete_User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/Delete_User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Edit_Attempt.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/Edit_Attempt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Edit_User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/Edit_User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/add_A_Climbing_Attempt.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/add_A_Climbing_Attempt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/add_A_User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/add_A_User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/getAll_User_Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/getAll_User_Table.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,13 +42,18 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="tomcat_dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1VtDx9Q5LDLIKJgv0a9oDzB2bUV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="h2" />
     <property name="RequestMappingsPanelOrder0" value="0" />
