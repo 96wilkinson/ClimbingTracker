@@ -18,7 +18,7 @@ import com.bae.persistence.domain.Climber;
 import javax.websocket.server.PathParam;
 
 @RestController
-@RequestMapping("/climberapp")
+@RequestMapping("/ClimbingTracker")
 public class ClimberController {
 
 	private ClimberService climberService;

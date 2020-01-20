@@ -1,4 +1,4 @@
-let BASE_URL = 'http://localhost:8080/demo/climberapp/DeleteClimbingAttempt/';
+let BASE_URL = 'http://3.10.92.183:8080/ClimbingTracker/ClimbingTracker/DeleteClimbingAttempt/';
 Remove_Attempt = function(event){
     event.preventDefault();
     id = this.id;
