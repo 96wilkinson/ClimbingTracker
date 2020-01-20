@@ -1,5 +1,5 @@
 const Add_User_form = document.getElementById("Input_User");
-let BASE_URL = '/ClimbingTracker/ClimbingTracker/ClimbingTracker/';
+let BASE_URL = '/ClimbingTracker/ClimbingTracker/';
 
 Add_User_form.onsubmit = function(event) {
     event.preventDefault();
