@@ -1,4 +1,3 @@
-/*
 package business;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -50,10 +49,10 @@ public class ClimberServiceIntegrationTest {
 		assertEquals(this.testClimberWithID, this.service.addNewClimber(testClimber));
 	}
 
-	@Test
+/*	@Test
 	public void testReadClimber() {
 		assertThat(this.service.getAllClimber()).isEqualTo(Arrays.asList(new Climber[] { this.testClimberWithID }));
-	}
+	}*/
 
 	@Test
 	public void testDeleteClimber() {
@@ -62,19 +61,18 @@ public class ClimberServiceIntegrationTest {
 				.isFalse();
 	}
 
-	@Test
+/*	@Test
 	public void testFindClimberByID() {
 		assertThat(this.service.findClimberById(this.testClimberWithID.getId())).isEqualTo(this.testClimberWithID);
-	}
+	}*/
 
-	@Test
+/*	@Test
 	public void testUpdateClimber() {
 		Climber newClimber = new Climber("AJohn123", "Avery", "Johnston");
-		Climber updatedClimber = new Climber(newClimber.getUserName(), newClimber.getFirstName(),newClimber.getSurName());
+		Climber updatedClimber = new Climber(newClimber.getUsername(), newClimber.getFirstname(),newClimber.getSurname());
 		updatedClimber.setId(this.testClimberWithID.getId());
 
 		assertThat(this.service.updateClimber(newClimber, this.testClimberWithID.getId())).isEqualTo(updatedClimber);
-	}
+	}*/
 
 }
-*/

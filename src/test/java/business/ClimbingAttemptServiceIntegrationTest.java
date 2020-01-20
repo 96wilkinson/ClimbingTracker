@@ -1,4 +1,3 @@
-/*
 package business;
 
 import com.bae.Application;
@@ -78,4 +77,3 @@ public class ClimbingAttemptServiceIntegrationTest {
 	}
 
 }
-*/

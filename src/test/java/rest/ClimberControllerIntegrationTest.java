@@ -1,4 +1,3 @@
-/*
 package rest;
 
 
@@ -71,7 +70,7 @@ public class ClimberControllerIntegrationTest {
     @Test
     public void testUpdateClimber() throws Exception {
         Climber newClimber = new Climber("Bear", "Bear", "Grylls");
-        Climber updatedClimber = new Climber(newClimber.getUserName(), newClimber.getFirstName(), newClimber.getSurName());
+        Climber updatedClimber = new Climber(newClimber.getUsername(), newClimber.getFirstname(), newClimber.getSurname());
         updatedClimber.setId(this.id);
 
         String result = this.mock
@@ -87,4 +86,3 @@ public class ClimberControllerIntegrationTest {
         this.mock.perform(request(HttpMethod.DELETE, "/climberapp/DeleteClimber/" + this.id)).andExpect(status().isOk());
     }
 }
-*/
