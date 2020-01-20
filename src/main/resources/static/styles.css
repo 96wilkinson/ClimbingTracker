@@ -140,7 +140,7 @@ th {
     border-radius: 10px;
 }
 
-.LargeButton{
+.LargeButton,Buttons{
     display: block;
     background-color: #999999;
     border: 5px#111111;
