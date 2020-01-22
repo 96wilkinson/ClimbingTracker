@@ -161,7 +161,7 @@
       <workItem from="1578063744216" duration="4548000" />
       <workItem from="1578225503740" duration="33841000" />
       <workItem from="1579512795120" duration="4030000" />
-      <workItem from="1579687343833" duration="5262000" />
+      <workItem from="1579687343833" duration="5927000" />
     </task>
     <task id="LOCAL-00001" summary="Climbing Attempt Service unit Test">
       <created>1578065038716</created>
@@ -303,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579692881059</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="pom updated removed war">
+      <created>1579693627485</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1579693627485</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,17 +336,18 @@
     <MESSAGE value="Tomcat initial" />
     <MESSAGE value="introduced a preloading command" />
     <MESSAGE value="pom updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="pom updated" />
+    <MESSAGE value="pom updated removed war" />
+    <option name="LAST_COMMIT_MESSAGE" value="pom updated removed war" />
   </component>
   <component name="WindowStateProjectService">
     <state x="588" y="214" width="800" height="677" key="#Project_Structure" timestamp="1579689613233">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="588" y="214" width="800" height="677" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1579689613233" />
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1579692880998">
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1579693627398">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579692880998" />
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579693627398" />
     <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1579512130188">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -356,10 +364,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579512130187" />
-    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1579692883234">
+    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1579693628777">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579692883234" />
+    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579693628777" />
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1579687921881">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

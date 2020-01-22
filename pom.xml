@@ -55,34 +55,17 @@
 	<build>
 
 		<finalName>spring-boot-docker</finalName>
-		<plugins>
-
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<classifier>exec</classifier>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
+			<pluginManagement>
+				<plugins>
+					<plugin>
+						<groupId>org.springframework.boot</groupId>
+						<artifactId>spring-boot-maven-plugin</artifactId>
 						<configuration>
-							<classifier>exec</classifier>
+							<executable>true</executable>
 						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-
+					</plugin>
+				</plugins>
+			</pluginManagement>
+		</build>
 	</build>
 </project>
