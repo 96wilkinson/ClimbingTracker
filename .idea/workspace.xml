@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f0df774-80f6-45d3-8661-c6facc3d623f" name="Default Changelist" comment="pom updated removed typo">
+    <list default="true" id="3f0df774-80f6-45d3-8661-c6facc3d623f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bae/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bae/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +164,7 @@
       <workItem from="1578063744216" duration="4548000" />
       <workItem from="1578225503740" duration="33841000" />
       <workItem from="1579512795120" duration="4030000" />
-      <workItem from="1579687343833" duration="12801000" />
+      <workItem from="1579687343833" duration="13019000" />
     </task>
     <task id="LOCAL-00001" summary="Climbing Attempt Service unit Test">
       <created>1578065038716</created>
@@ -418,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579703685705</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="worked locally">
+      <created>1579704077457</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1579704077457</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +454,8 @@
     <MESSAGE value="pom updated removed war" />
     <MESSAGE value="pom updated removed double packaging" />
     <MESSAGE value="pom updated removed typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="pom updated removed typo" />
+    <MESSAGE value="worked locally" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked locally" />
   </component>
   <component name="WindowStateProjectService">
     <state x="588" y="214" width="800" height="677" key="#Project_Structure" timestamp="1579689613233">
@@ -458,10 +466,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="669" y="357" width="639" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1579695541763" />
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1579703859305">
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1579704077378">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579703859305" />
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579704077378" />
     <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1579704009129">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -494,10 +502,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1807" height="278" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579704009130" />
-    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1579703687090">
+    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1579704078776">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579703687090" />
+    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579704078776" />
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1579687921881">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
