@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f0df774-80f6-45d3-8661-c6facc3d623f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -161,7 +162,7 @@
       <workItem from="1578063744216" duration="4548000" />
       <workItem from="1578225503740" duration="33841000" />
       <workItem from="1579512795120" duration="4030000" />
-      <workItem from="1579687343833" duration="3015000" />
+      <workItem from="1579687343833" duration="4028000" />
     </task>
     <task id="LOCAL-00001" summary="Climbing Attempt Service unit Test">
       <created>1578065038716</created>
@@ -268,7 +269,21 @@
       <option name="project" value="LOCAL" />
       <updated>1579689713089</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="pom updated">
+      <created>1579690371134</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1579690371134</updated>
+    </task>
+    <task id="LOCAL-00017" summary="pom updated">
+      <created>1579690453740</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1579690453740</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,10 +316,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="588" y="214" width="800" height="677" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1579689613233" />
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1579690371061">
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1579690453659">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579690371061" />
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579690453659" />
     <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1579512130188">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -321,10 +336,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579512130187" />
-    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1579690376947">
+    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1579690455265">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579690376947" />
+    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579690455265" />
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1579687921881">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
