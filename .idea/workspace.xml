@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3f0df774-80f6-45d3-8661-c6facc3d623f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="tomcat_dev" />
+        <entry key="$PROJECT_DIR$" value="Tomcat" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,6 +56,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -156,7 +160,8 @@
       <updated>1578063741216</updated>
       <workItem from="1578063744216" duration="4548000" />
       <workItem from="1578225503740" duration="33841000" />
-      <workItem from="1579512795120" duration="2194000" />
+      <workItem from="1579512795120" duration="4030000" />
+      <workItem from="1579687343833" duration="2337000" />
     </task>
     <task id="LOCAL-00001" summary="Climbing Attempt Service unit Test">
       <created>1578065038716</created>
@@ -249,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579515001073</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="introduced a preloading command">
+      <created>1579515169171</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1579515169171</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,10 +289,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="introduced a preloading command" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1579515000991">
+    <state x="588" y="214" width="800" height="677" key="#Project_Structure" timestamp="1579689613233">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579515000991" />
+    <state x="588" y="214" width="800" height="677" key="#Project_Structure/67.27.1853.1053@67.27.1853.1053" timestamp="1579689613233" />
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1579515169102">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579515169102" />
     <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1579512130188">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -297,10 +313,14 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1807" height="278" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579512130187" />
-    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1579515002505">
+    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1579689681528">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579515002505" />
+    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579689681528" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1579687921881">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1579687921881" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/com_BAE_ClimbingTracker$ClimbingAttemptControllerIntegrationTest_testCreateClimbingAttempt.ic" NAME="ClimbingAttemptControllerIntegrationTest.testCreateClimbingAttempt Coverage Results" MODIFIED="1579164845544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
