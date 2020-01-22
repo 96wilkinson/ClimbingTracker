@@ -74,6 +74,10 @@
 					</archive>
 				</configuration>
 			</plugin>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+			</dependency>
 		</plugins>
 	</build>
 </project>
