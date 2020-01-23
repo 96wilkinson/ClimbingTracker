@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3f0df774-80f6-45d3-8661-c6facc3d623f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Add_Climbing_Attempt.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/Add_Climbing_Attempt.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ClimbingAttemptTable.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/ClimbingAttemptTable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/User_Table.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/User_Table.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -483,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579779295332</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="mysql intiated">
+      <created>1579779985238</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1579779985238</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,10 +531,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="669" y="357" width="639" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1579695541763" />
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1579779295087">
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1579779985134">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579779295087" />
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1579779985134" />
     <state width="1807" height="278" key="GridCell.Tab.0.bottom" timestamp="1579776540781">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -562,10 +567,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1807" height="278" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579776540782" />
-    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1579779297111">
+    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1579779986741">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579779297111" />
+    <state x="588" y="277" width="800" height="551" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1579779986741" />
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1579687921881">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
