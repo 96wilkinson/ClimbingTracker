@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f0df774-80f6-45d3-8661-c6facc3d623f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/com.bae.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/com.bae.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ClimbingAttemptTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/ClimbingAttemptTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Delete_Attempt.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/Delete_Attempt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Delete_User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/Delete_User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Edit_Attempt.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/Edit_Attempt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Edit_User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/Edit_User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/User_Table.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/User_Table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/add_A_Climbing_Attempt.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/add_A_Climbing_Attempt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/add_A_User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/add_A_User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/getAll_User_Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/getAll_User_Table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,13 +35,20 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Tomcat" />
+        <entry key="$PROJECT_DIR$" value="tomcat_dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1VtDx9Q5LDLIKJgv0a9oDzB2bUV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
