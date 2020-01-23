@@ -1,4 +1,4 @@
-axios.get('/ClimbingTracker/ClimbingTracker/getAll').then (({data: myClimbers}) =>{
+axios.get('/application/ClimbingTracker/getAll').then (({data: myClimbers}) =>{
     //
     let numOfclimbers = myClimbers.length;
     //create a table if there exists more than one climber

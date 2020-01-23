@@ -1,4 +1,4 @@
-let BASE_URL = '/ClimbingTracker/ClimbingTracker/DeleteClimbingAttempt/';
+let BASE_URL = '/application/ClimbingTracker/DeleteClimbingAttempt/';
 Remove_Attempt = function(event){
     event.preventDefault();
     id = this.id;

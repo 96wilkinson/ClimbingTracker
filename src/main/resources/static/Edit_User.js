@@ -1,5 +1,5 @@
 
-let Edit_URL = '/ClimbingTracker/ClimbingTracker/updateClimber/';
+let Edit_URL = '/application/ClimbingTracker/updateClimber/';
 function edit_row(no)
 {
     document.getElementById("Edit" + no).style.display="none";

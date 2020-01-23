@@ -1,4 +1,4 @@
-let BASE_URL = '/ClimbingTracker/ClimbingTracker/DeleteClimber/';
+let BASE_URL = '/application/ClimbingTracker/DeleteClimber/';
 Remove_User = function(event){
     event.preventDefault();
     id = this.id;

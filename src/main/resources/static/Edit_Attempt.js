@@ -1,5 +1,5 @@
 
-let Edit_URL = '/ClimbingTracker/ClimbingTracker/updateClimbingAttempt/';
+let Edit_URL = '/application/ClimbingTracker/updateClimbingAttempt/';
 function edit_row(no)
 {
 
