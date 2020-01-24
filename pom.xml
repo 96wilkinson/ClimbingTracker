@@ -18,11 +18,11 @@
 	<distributionManagement>
 		<repository>
 			<id>mavenRepo</id>
-			<url>http://3.10.92.183:8081/repository/mavenRepo/</url>
+			<url>http://localhost:8081/repository/mavenRepo/</url>
 		</repository>
 		<snapshotRepository>
 			<id>snapshots</id>
-			<url>http://3.10.92.183:8081/repository/maven-snapshots/</url>
+			<url>http://localhost:8081/repository/maven-snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 	<dependencies>
