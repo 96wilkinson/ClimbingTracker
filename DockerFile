@@ -11,6 +11,6 @@ Copy Delete_Attempt.js /opt/AWS_FrontEnd/
 COPY Delete_User.js /opt/AWS_FrontEnd/
 COPY Edit_Attempt.js /opt/AWS_FrontEnd/
 COPY Edit_User.js /opt/AWS_FrontEnd/
-COPY indxi.html /opt/AWS_FrontEnd/
+COPY index.html /opt/AWS_FrontEnd/
 COPY styles.css /opt/AWS_FrontEnd/
 COPY User_Table.html /opt/AWS_FrontEnd/
