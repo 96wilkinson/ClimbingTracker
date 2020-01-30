@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f0df774-80f6-45d3-8661-c6facc3d623f" name="Default Changelist" comment="">
+    <list default="true" id="3f0df774-80f6-45d3-8661-c6facc3d623f" name="Default Changelist" comment="pom changed to allow Nexus">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,13 +173,6 @@
       <workItem from="1579512795120" duration="4030000" />
       <workItem from="1579687343833" duration="20879000" />
       <workItem from="1579859814185" duration="9508000" />
-    </task>
-    <task id="LOCAL-00007" summary="introduced a preloading command">
-      <created>1579512985409</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1579512985409</updated>
     </task>
     <task id="LOCAL-00008" summary="introduced a preloading command">
       <created>1579513170044</created>
@@ -517,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580123204919</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="pom changed to allow Nexus">
+      <created>1580380656283</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1580380656284</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -561,10 +561,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="669" y="357" width="639" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1579695541763" />
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1580123219680">
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2" timestamp="1580380656127">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1580123219680" />
+    <state x="558" y="149" width="860" height="807" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1580380656127" />
     <state width="1807" height="344" key="GridCell.Tab.0.bottom" timestamp="1579864022222">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -613,10 +613,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1807" height="344" key="GridCell.Tab.2.right/67.27.1853.1053@67.27.1853.1053" timestamp="1579864022228" />
-    <state x="685" y="459" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1580123212323">
+    <state x="685" y="459" width="800" height="551" key="Vcs.Push.Dialog.v2" timestamp="1580380659457">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="685" y="459" width="800" height="551" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1580123212323" />
+    <state x="685" y="459" width="800" height="551" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1580380659457" />
     <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1579859814199">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
