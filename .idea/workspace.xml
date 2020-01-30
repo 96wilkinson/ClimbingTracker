@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f0df774-80f6-45d3-8661-c6facc3d623f" name="Default Changelist" comment="pom changed to allow Nexus">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Add_Climbing_Attempt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Add_User.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ClimbingAttemptTable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/ClimbingAttemptTable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Delete_Attempt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Delete_User.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Edit_Attempt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Edit_User.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/User_Table.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/add_A_Climbing_Attempt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/add_A_User.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/getAll_User_Table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/styles.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -625,18 +638,5 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="309" y="245" width="432" height="615" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1579863484266" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/com_BAE_ClimbingTracker$ClimbingAttemptControllerIntegrationTest_testCreateClimbingAttempt.ic" NAME="ClimbingAttemptControllerIntegrationTest.testCreateClimbingAttempt Coverage Results" MODIFIED="1579164845544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>rest.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/com_BAE_ClimbingTracker$All_in_Application__1_.ic" NAME="All in Application (1) Coverage Results" MODIFIED="1579089089557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/com_BAE_ClimbingTracker$ClimberRepoTest.ic" NAME="ClimberRepoTest Coverage Results" MODIFIED="1579027012458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>persistance.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/com_BAE_ClimbingTracker$com_bae_persistence_repository_in_Application.ic" NAME="com.bae.persistence.repository in Application Coverage Results" MODIFIED="1579101540706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.bae.persistence.repository.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/com_BAE_ClimbingTracker$All_in_Application.ic" NAME="All in Application Coverage Results" MODIFIED="1579109634056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
