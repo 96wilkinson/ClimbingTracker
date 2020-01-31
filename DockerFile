@@ -1,16 +1,17 @@
 FROM nginx:latest
 
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY add_A_Climbing_Attempt.js /opt/AWS_FrontEnd/
-COPY add_A_User.js /opt/AWS_FrontEnd/
-COPY Add_Climbing_Attempt.html /opt/AWS_FrontEnd/
-COPY Add_User.html /opt/AWS_FrontEnd/
-COPY ClimbingAttemptTable.html /opt/AWS_FrontEnd/
-COPY ClimbingAttemptTable.js /opt/AWS_FrontEnd/
-Copy Delete_Attempt.js /opt/AWS_FrontEnd/
-COPY Delete_User.js /opt/AWS_FrontEnd/
-COPY Edit_Attempt.js /opt/AWS_FrontEnd/
-COPY Edit_User.js /opt/AWS_FrontEnd/
-COPY index.html /opt/AWS_FrontEnd/
-COPY styles.css /opt/AWS_FrontEnd/
-COPY User_Table.html /opt/AWS_FrontEnd/
+COPY add_A_Climbing_Attempt.js /opt/ClimbingTracker/
+COPY add_A_User.js /opt/ClimbingTracker/
+COPY Add_Climbing_Attempt.html /opt/ClimbingTracker/
+COPY Add_User.html /opt/ClimbingTracker/
+COPY ClimbingAttemptTable.html /opt/ClimbingTracker/
+COPY ClimbingAttemptTable.js /opt/ClimbingTracker/
+Copy Delete_Attempt.js /opt/ClimbingTracker/
+COPY Delete_User.js /opt/ClimbingTracker/
+COPY Edit_Attempt.js /opt/ClimbingTracker/
+COPY Edit_User.js /opt/ClimbingTracker/
+COPY index.html /opt/ClimbingTracker/
+COPY styles.css /opt/ClimbingTracker/
+COPY User_Table.html /opt/ClimbingTracker/
+
