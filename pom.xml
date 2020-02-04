@@ -5,7 +5,6 @@
 	<groupId>com.bae.ClimbingTracker</groupId>
 	<artifactId>application</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -16,14 +15,9 @@
 		<java.version>1.8</java.version>
 	</properties>
 	<distributionManagement>
-	<repository>
-	<id>nexus</id>
-	<name>maven-releases</name>
-	<url>http://3.11.84.155:8081/repository/mmamanagement-hosted/</url>
-	</repository>
         <snapshotRepository>
             <id>nexus</id>
-            <name>maven-snapshots</name>
+            <name>mmamanagement-hosted</name>
             <url>http://3.11.84.155:8081/repository/mmamanagement-hosted/</url>
         </snapshotRepository>
     	</distributionManagement>
@@ -93,6 +87,5 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>application</finalName>
 	</build>
 </project>
