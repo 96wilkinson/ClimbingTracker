@@ -14,13 +14,6 @@
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
-	<distributionManagement>
-        <snapshotRepository>
-            <id>nexus</id>
-            <name>mmamanagement-hosted</name>
-            <url>http://3.11.84.155:8081/repository/mmamanagement-hosted/</url>
-        </snapshotRepository>
-    	</distributionManagement>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -88,4 +81,11 @@
 			</plugin>
 		</plugins>
 	</build>
+		<distributionManagement>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>mmamanagement-hosted</name>
+            <url>http://3.11.84.155:8081/repository/mmamanagement-hosted/</url>
+        </snapshotRepository>
+    	</distributionManagement>
 </project>
