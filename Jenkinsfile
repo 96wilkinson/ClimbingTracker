@@ -17,7 +17,7 @@ pipeline {
                 sh "cd target/site && ls -la"
                 sh "whoami"
                 sh "chmod 777 ~/.jenkins/workspace/ClimbingTracker/target/site/surefire-report.html"
-                sh "mail -s Surefire 96wilkinson@sky.com -A 'surefire-report.html'"
+                sh "mail -s Surefire 96wilkinson@sky.com -A "~/.jenkins/workspace/ClimbingTracker/target/site/surefire-report.html""
                 sh "cd "
             }
         }
