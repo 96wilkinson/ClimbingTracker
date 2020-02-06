@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh "mvn surefire-report:report"
                 sh "cd target/site && ls -a"
-                sh "echo "surefire-report:report" | mail -s "Surefire" 96wilkinson@sky.com -A surefire-report.html"
+                sh "echo "surefire-report" | mail -s "Surefire" 96wilkinson@sky.com -A surefire-report.html"
                 sh "cd "
             }
         }
