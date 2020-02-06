@@ -34,7 +34,7 @@ pipeline {
         }
         stage('--testing environment creation--') {
             steps {
-                sh "ssh -tt-i /home/ubuntu/myfirstVM.pem ubuntu@ec2-52-56-223-57.eu-west-2.compute.amazonaws.com ./script.sh"
+                sh "ssh -tt -i /home/ubuntu/myfirstVM.pem ubuntu@ec2-52-56-223-57.eu-west-2.compute.amazonaws.com ./script.sh"
                 sh "exit"
                 }
             }
