@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh "mvn surefire-report:report"
                 sh "ls -a"
-                sh "cd target/site/surefire-report && ls -a"
+                sh "cd target/site && ls -a"
                 sh "cd "
                 sh "mv target/site/surefire-report /home/ubuntu"
             }
