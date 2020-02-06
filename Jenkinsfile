@@ -6,9 +6,15 @@ pipeline {
                 sh "mvn clean"
             }
         }
-        stage('--test Backend--') {
+        stage('--test--') {
             steps {
                 sh "mvn test"
+            }
+        }
+        stage('--Producing Surefire Report--') {
+            steps {
+                sh "mvn surefire-report:report"
+                sh "google-chrome target/site/surefire-report.html
             }
         }
         stage('--package--') {
