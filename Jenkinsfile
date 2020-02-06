@@ -6,7 +6,7 @@ pipeline {
                 sh "mvn clean"
             }
         }
-        stage('--test--') {
+        stage('--test the backend--') {
             steps {
                 sh "mvn test"
             }
@@ -14,11 +14,7 @@ pipeline {
         stage('--Producing Surefire Report--') {
             steps {
                 sh "mvn surefire-report:report"
-                sh "cd target/site && ls -la"
-                sh "whoami"
-                sh "chmod 777 ~/.jenkins/workspace/ClimbingTracker/target/site/surefire-report.html"
                 sh "mail -s Surefire 96wilkinson@sky.com -A ~/.jenkins/workspace/ClimbingTracker/target/site/surefire-report.html"
-                sh "cd "
             }
         }
         stage('--package--') {
@@ -41,10 +37,17 @@ pipeline {
                 sh "docker stop climbingtracker:latest"
                 sh "docker rm climbingtracker:latest"
                 sh "mvn dependency:get -DremoteRepositories=http://3.11.84.155:8081/repository/mmamanagement-hosted -DgroupId=com.bae.ClimbingTracker -DartifactId=application -Dversion=0.0.1-SNAPSHOT -Dtransitive=false"
-                sh "mvn dependency:copy -Dartifact=com.bae.ClimbingTracker:application:0.0.1-SNAPSHOT -DoutputDirectory=/home/ubuntu/"
-                sh "cd /home/ubuntu/ && docker build -t climbingtracker ."
+                sh "mvn dependency:copy -Dartifact=com.bae.ClimbingTracker:application:0.0.1-SNAPSHOT"
+                sh "git clone https://github.com/96wilkinson/ClimbingTrackerDockerfile.git"
+                sh "docker build -t climbingtracker ."
+                sh "docker run -dit --restart unless-stopped -d -p 8085:8085 --name climbingtracker climbingtracker:latest"
+                sh "exit"
+                }
             }
-        }
+        stage('--Test Front End--') {
+            steps {
+                sh "mvn test"
+            }
         }
     }
 }
