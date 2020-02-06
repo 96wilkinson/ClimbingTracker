@@ -17,7 +17,7 @@ pipeline {
                 sh "ls -a"
                 sh "cd target/site && ls -a"
                 sh "cd "
-                sh "mv target/site/surefire-report.html /home/ubuntu"
+                sh "sudo mv target/site/surefire-report.html /home/ubuntu"
             }
         }
         stage('--package--') {
