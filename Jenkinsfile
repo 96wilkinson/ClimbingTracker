@@ -14,10 +14,9 @@ pipeline {
         stage('--Producing Surefire Report--') {
             steps {
                 sh "mvn surefire-report:report"
-                sh "ls -a"
                 sh "cd target/site && ls -a"
+                sh "echo "surefire-report:report" | mail -s "Surefire" 96wilkinson@sky.com -A surefire-report.html
                 sh "cd "
-                sh "sudo mv target/site/surefire-report.html /home/ubuntu"
             }
         }
         stage('--package--') {
