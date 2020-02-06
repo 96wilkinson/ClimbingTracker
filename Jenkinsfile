@@ -14,8 +14,8 @@ pipeline {
         stage('--Producing Surefire Report--') {
             steps {
                 sh "mvn surefire-report:report"
-                sh "cd target/site && ls -a"
-                sh "chmod 700 surefire-report.html"
+                sh "cd target/site && ls -la"
+                sh "chmod 777 surefire-report.html"
                 sh "mail -s Surefire 96wilkinson@sky.com -A 'surefire-report.html'"
                 sh "cd "
             }
