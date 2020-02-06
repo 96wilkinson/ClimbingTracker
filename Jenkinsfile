@@ -35,6 +35,16 @@ pipeline {
             steps {
                 sh "mvn deploy"
             }
+        stage('--testing environment creation--') {
+            steps {
+                sh "ssh -i "myfirstVM.pem" ubuntu@ec2-52-56-223-57.eu-west-2.compute.amazonaws.com"
+                sh "docker stop climbingtracker:latest"
+                sh "docker rm climbingtracker:latest"
+                sh "mvn dependency:get -DremoteRepositories=http://3.11.84.155:8081/repository/mmamanagement-hosted -DgroupId=com.bae.ClimbingTracker -DartifactId=application -Dversion=0.0.1-SNAPSHOT -Dtransitive=false"
+                sh "mvn dependency:copy -Dartifact=com.bae.ClimbingTracker:application:0.0.1-SNAPSHOT -DoutputDirectory=/home/ubuntu/"
+                sh "cd /home/ubuntu/ && docker build -t climbingtracker ."
+            }
+        }
         }
     }
 }
