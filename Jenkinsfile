@@ -13,7 +13,8 @@ pipeline {
         }
         stage('--Producing Surefire Report--') {
             steps {
-                sh "mvn surefire-report:report -O ~/home/Ubuntu/report.html"
+                sh "mvn surefire-report:report"
+                sh "mv /target/site/surefire-report /home/ubuntu"
             }
         }
         stage('--package--') {
