@@ -14,7 +14,7 @@ pipeline {
         stage('--Producing Surefire Report--') {
             steps {
                 sh "mvn surefire-report:report"
-                sh "google-chrome target/site/surefire-report.html
+                sh "google-chrome target/site/surefire-report.html"
             }
         }
         stage('--package--') {
