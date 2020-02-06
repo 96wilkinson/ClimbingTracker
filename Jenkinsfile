@@ -16,7 +16,7 @@ pipeline {
                 sh "mvn surefire-report:report"
                 sh "cd target/site && ls -la"
                 sh "whoami"
-                sh "chmod 777 ./*"
+                sh "chmod 777 ~/.jenkins/workspace/ClimbingTracker/target/site/surefire-report.html"
                 sh "mail -s Surefire 96wilkinson@sky.com -A 'surefire-report.html'"
                 sh "cd "
             }
