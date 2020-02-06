@@ -15,6 +15,7 @@ pipeline {
             steps {
                 sh "mvn surefire-report:report"
                 sh "cd target/site && ls -la"
+                sh "whoami"
                 sh "chmod 777 surefire-report.html"
                 sh "mail -s Surefire 96wilkinson@sky.com -A 'surefire-report.html'"
                 sh "cd "
