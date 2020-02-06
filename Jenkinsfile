@@ -47,6 +47,7 @@ pipeline {
                 sh "ssh -tt -i /home/ubuntu/myfirstVM.pem ubuntu@@ec2-3-8-141-253.eu-west-2.compute.amazonaws.com ./script.sh"
                 sh "exit"
             }
+        }
         stage('--Test Live Env--') {
             steps {
                 sh "mvn test"
