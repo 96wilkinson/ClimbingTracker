@@ -34,16 +34,7 @@ pipeline {
         }
         stage('--testing environment creation--') {
             steps {
-                sh "git clone https://github.com/96wilkinson/AWSKEY.git"
-                sh "chmod 777 'myfirstVM.pem'"
-                sh "ssh -tt -o StrictHostKeyChecking=no -i 'myfirstVM.pem' ubuntu@ec2-52-56-223-57.eu-west-2.compute.amazonaws.com"
-                sh "docker stop climbingtracker:latest"
-                sh "docker rm climbingtracker:latest"
-                sh "mvn dependency:get -DremoteRepositories=http://3.11.84.155:8081/repository/mmamanagement-hosted -DgroupId=com.bae.ClimbingTracker -DartifactId=application -Dversion=0.0.1-SNAPSHOT -Dtransitive=false"
-                sh "mvn dependency:copy -Dartifact=com.bae.ClimbingTracker:application:0.0.1-SNAPSHOT"
-                sh "git clone https://github.com/96wilkinson/ClimbingTrackerDockerfile.git"
-                sh "docker build -t climbingtracker ."
-                sh "docker run -dit --restart unless-stopped -d -p 8085:8085 --name climbingtracker climbingtracker:latest"
+                sh "ssh -tt-i /home/ubuntu/myfirstVM.pem ubuntu@ec2-52-56-223-57.eu-west-2.compute.amazonaws.com ./script.sh"
                 sh "exit"
                 }
             }
