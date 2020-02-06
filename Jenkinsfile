@@ -31,6 +31,7 @@ pipeline {
             steps {
                 sh "mvn deploy"
             }
+        }
         stage('--testing environment creation--') {
             steps {
                 sh "ssh -i "myfirstVM.pem" ubuntu@ec2-52-56-223-57.eu-west-2.compute.amazonaws.com"
