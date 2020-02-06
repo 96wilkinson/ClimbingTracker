@@ -34,6 +34,7 @@ pipeline {
         }
         stage('--testing environment creation--') {
             steps {
+                sh "git clone https://github.com/96wilkinson/AWSKEY.git"
                 sh "chmod 777 'myfirstVM.pem'"
                 sh "ssh -tt -o StrictHostKeyChecking=no -i 'myfirstVM.pem' ubuntu@ec2-52-56-223-57.eu-west-2.compute.amazonaws.com"
                 sh "docker stop climbingtracker:latest"
