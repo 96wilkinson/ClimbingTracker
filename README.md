@@ -25,6 +25,7 @@ This image shows our actual pipeline model. However, the idea has evolved from t
 2. Created IAM roles for back-end, front-end and RDS instances
 3. Created RDS database with specific RDS IAM role that allows access to database
 4. Created back-end, front-end test instances. Security groups on backend:
+
 Back-end to RDS:
 * Allows access to MYSQL database on your IP only
 * Allows custom TCP request from anywhere, with a port specification of back-end port
