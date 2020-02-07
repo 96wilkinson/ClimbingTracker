@@ -14,7 +14,6 @@ pipeline {
         stage('--Producing Surefire Report--') {
             steps {
                 sh "mvn surefire-report:report"
-                sh "mail -s Surefire 96wilkinson@sky.com -A ~/.jenkins/workspace/ClimbingTracker/target/site/surefire-report.html"
             }
         }
         stage('--package--') {
