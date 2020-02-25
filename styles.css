@@ -1,15 +1,9 @@
 ul {
-
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    align-content: center;
-    align-self: center;
-    text-align: center;
-    margin-left:auto;
-    margin-right:auto;
 }
 
 li {
@@ -22,14 +16,8 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-
-    align-content: center;
-    align-self: center;
-    text-align: center;
-    margin-left:auto;
-    margin-right:auto;
 }
-
+/* Change the link color to #111 (black) on hover */
 li a:hover {
     background-color: #111;
 }
@@ -38,7 +26,7 @@ th, td {
     padding: 15px;
     text-align: center;
 }
-.Title{
+title{
     text-align: center;
     color: white;
     padding: 5px;
@@ -48,7 +36,7 @@ th, td {
     margin-left:auto;
     margin-right:auto;
 }
-.Upper_Head{
+header{
     background-color: #333;
     border-radius: 10px;
     width: 100%;
@@ -60,8 +48,9 @@ th, td {
     margin-right:auto;
 
 }
-.Navigation_Bar{
+nav{
     padding: 5px;
+    background-color: #333333;
     border: 2px white;
     align-content: center;
     align-self: center;
