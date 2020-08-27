@@ -57,8 +57,6 @@ axios.get('/application/ClimbingTracker/getAll').then (({data: myClimbers}) =>{
 
         // CREATE TABLE BODY .
 		let tBody = document.createElement("tbody");
-
-			
 		// ADD COLUMN HEADER TO ROW OF TABLE HEAD.
 		for (let i = 0; i < myClimbers.length; i++) {
 			let bRow = document.createElement("tr"); // CREATE ROW FOR EACH RECORD .
