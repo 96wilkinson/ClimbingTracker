@@ -1,16 +1,16 @@
 CREATE TABLE climber 
 (ID INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-username VARCHAR(255),
-firstname VARCHAR(255),
-surname VARCHAR(255));
+username VARCHAR(255) NOT NULL,
+firstname VARCHAR(255) NOT NULL,
+surname VARCHAR(255) NOT NULL);
 
 CREATE TABLE climbing_attempts
 (ID INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-day INT(2),
-month INT(2),
-year INT(4),
-difficulty INT(1),
-time_spent INT(2));
+day INT(2) NOT NULL,
+month INT(2) NOT NULL,
+year INT(4) NOT NULL,
+difficulty INT(1) NOT NULL,
+time_spent INT(2) NOT NULL);
 
 INSERT INTO climber (username,firstname,surname) VALUES
     ('Scrappy','John', 'Gordon'),
